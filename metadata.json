@@ -1,0 +1,8 @@
+{
+  "name": "Minuit Doré",
+  "description": "Robes à sequins, pochettes, bijoux dorés et escarpins pour le Réveillon du 31 décembre 2026. Look complet en un clic à -15 %. Livraison à Cotonou avant le 31.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
