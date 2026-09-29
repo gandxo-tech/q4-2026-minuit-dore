@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Minuit Doré – Tenues de soirée du Réveillon 2027 : robes à paillettes, pochettes, bijoux · Cotonou</title>
-<meta name="description" content="Robes à sequins, pochettes, bijoux dorés et escarpins pour le Réveillon du 31 décembre 2026. Look complet en un clic à -15 %. Livraison à Cotonou avant le 31.">
+<meta name="description" content="Robes à sequins, pochettes, bijoux dorés et escarpins pour le Réveillon du 31 décembre 2026. Look complet en un clic à -15%. Livraison à Cotonou avant le 31.">
 <meta name="theme-color" content="#0B0B0F">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Minuit Doré – Tenues de soirée du Réveillon 2027 : robes à paillettes, pochettes, bijoux · Cotonou">
-<meta property="og:description" content="Robes à sequins, pochettes, bijoux dorés et escarpins pour le Réveillon du 31 décembre 2026. Look complet en un clic à -15 %. Livraison à Cotonou avant le 31.">
+<meta property="og:description" content="Robes à sequins, pochettes, bijoux dorés et escarpins pour le Réveillon du 31 décembre 2026. Look complet en un clic à -15%. Livraison à Cotonou avant le 31.">
 <meta property="og:image" content="img/hero.webp">
 <meta property="og:locale" content="fr_FR">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B0B0F'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23D4AF37' stroke-width='1.5'/%3E%3Cpath d='M16 9v7l4 3' stroke='%23D4AF37' stroke-width='1.5' fill='none'/%3E%3C/svg%3E">
@@ -30,399 +30,774 @@ p{margin:0 0 1em}
 .wrap{width:min(1200px,100% - 2.5rem);margin-inline:auto}
 .skip{position:absolute;left:-999px;top:0;background:var(--acc);color:var(--on-acc);padding:.6rem 1rem;z-index:999}
 .skip:focus{left:1rem}
-:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+:focus-visible{outline:2.5px solid var(--acc);outline-offset:3.5px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .tnum{font-variant-numeric:tabular-nums}
 [hidden]{display:none!important}
 
-/* promo bar */
-.promo{background:var(--promo-bg,var(--acc));color:var(--promo-fg,var(--on-acc));font-size:.85rem;font-weight:600;text-align:center;padding:.5rem 1rem;display:flex;gap:.75rem;justify-content:center;align-items:center;flex-wrap:wrap}
-.promo button{background:transparent;border:1.5px dashed currentColor;border-radius:6px;padding:.1rem .55rem;font-weight:800;letter-spacing:.05em}
+/* promo bar with shimmer */
+.promo{background:var(--promo-bg,var(--acc));color:var(--promo-fg,var(--on-acc));font-size:.85rem;font-weight:700;text-align:center;padding:.55rem 1rem;display:flex;gap:.75rem;justify-content:center;align-items:center;flex-wrap:wrap;position:relative;overflow:hidden}
+.promo::after{content:'';position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);animation:shimmer 4s infinite}
+@keyframes shimmer{0%{left:-100%}20%{left:200%}100%{left:200%}}
+.promo button{background:transparent;border:1.5px dashed currentColor;border-radius:6px;padding:.1rem .55rem;font-weight:800;letter-spacing:.05em;transition:transform .2s}
+.promo button:hover{transform:scale(1.05)}
 
 /* header */
-.hdr{position:sticky;top:0;z-index:50;background:var(--hdr-bg,var(--bg));border-bottom:1px solid var(--line);backdrop-filter:saturate(1.4) blur(10px)}
-.hdr .wrap{display:flex;align-items:center;gap:1.25rem;min-height:68px}
-.logo{display:flex;align-items:center;gap:.55rem;text-decoration:none;font-family:var(--fd);font-weight:var(--fdw,700);font-size:1.25rem;white-space:nowrap}
-.logo svg{width:34px;height:34px;flex:none}
-.nav{display:flex;gap:1.4rem;margin-left:auto}
-.nav a{text-decoration:none;font-weight:600;font-size:.95rem;opacity:.85}
+.hdr{position:sticky;top:0;z-index:50;background:rgba(11, 11, 15, 0.88);border-bottom:1px solid rgba(212, 175, 55, 0.15);backdrop-filter:blur(14px);transition:all 0.3s ease}
+.hdr .wrap{display:flex;align-items:center;gap:1.25rem;min-height:72px}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--fd);font-weight:var(--fdw,700);font-size:1.3rem;white-space:nowrap;transition:opacity .2s}
+.logo:hover{opacity:.9}
+.logo svg{width:36px;height:36px;flex:none;filter:drop-shadow(0 2px 8px rgba(212,175,55,.3))}
+.nav{display:flex;gap:1.6rem;margin-left:auto}
+.nav a{text-decoration:none;font-weight:600;font-size:.95rem;opacity:.8;transition:opacity .2s,color .2s}
 .nav a:hover,.nav a[aria-current="page"]{opacity:1;color:var(--acc-text,var(--acc))}
-.cart-btn{position:relative;display:inline-flex;align-items:center;gap:.4rem;background:transparent;border:1.5px solid var(--line-strong,var(--line));border-radius:999px;padding:.5rem .9rem;font-weight:700}
+.cart-btn{position:relative;display:inline-flex;align-items:center;gap:.5rem;background:transparent;border:1.5px solid var(--line-strong,var(--line));border-radius:999px;padding:.55rem 1rem;font-weight:700;transition:all .2s;color:var(--fg)}
+.cart-btn:hover{border-color:var(--acc);box-shadow:0 0 15px rgba(212,175,55,.2);transform:translateY(-1px)}
 .cart-btn svg{width:20px;height:20px}
-.cart-count{min-width:22px;height:22px;border-radius:999px;background:var(--acc);color:var(--on-acc);font-size:.75rem;display:inline-grid;place-items:center;padding:0 .35rem}
-.cart-count.bump{animation:bump .4s}
-@keyframes bump{50%{transform:scale(1.35)}}
-@media (max-width:760px){.nav{display:none}.hdr .cart-btn{margin-left:auto}.logo{font-size:1.1rem}}
-@media (max-width:380px){.cart-btn{padding:.45rem .65rem;font-size:.9rem}.logo{font-size:1rem}}
+.cart-count{min-width:22px;height:22px;border-radius:999px;background:var(--acc);color:var(--on-acc);font-size:.75rem;display:inline-grid;place-items:center;padding:0 .35rem;font-weight:800}
+.cart-count.bump{animation:bump .4s cubic-bezier(.175,.885,.32,1.275)}
+@keyframes bump{50%{transform:scale(1.4)}}
+@media (max-width:760px){.nav{display:none}.hdr .cart-btn{margin-left:auto}.logo{font-size:1.15rem}}
+@media (max-width:380px){.cart-btn{padding:.45rem .65rem;font-size:.9rem}.logo{font-size:1.05rem}}
 
-/* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border:0;border-radius:var(--btn-r,10px);padding:.95rem 1.5rem;font-weight:800;font-size:1rem;text-decoration:none;transition:transform .15s,box-shadow .15s,background .15s;min-height:48px;line-height:1.1}
+/* buttons with micro-glow */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border:0;border-radius:var(--btn-r,12px);padding:1rem 1.8rem;font-weight:800;font-size:.95rem;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;min-height:50px;line-height:1.1;letter-spacing:.08em;text-transform:uppercase}
 .btn:active{transform:translateY(1px) scale(.99)}
-.btn-acc{background:var(--acc);color:var(--on-acc);box-shadow:0 8px 24px -10px var(--acc)}
-.btn-acc:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px var(--acc)}
-.btn-ghost{background:transparent;color:inherit;border:1.5px solid currentColor}
-.btn-ghost:hover{background:color-mix(in srgb,currentColor 8%,transparent)}
-.btn-wa{background:#1FAF55;color:#fff}
-.btn-sm{padding:.6rem 1rem;min-height:40px;font-size:.9rem}
+.btn-acc{background:linear-gradient(135deg,#E9C85B,#D4AF37 45%,#A8841F);color:#0B0B0F;box-shadow:0 8px 25px -8px rgba(212,175,55,.6);position:relative;overflow:hidden}
+.btn-acc::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);transform:translateX(-100%);transition:transform .6s}
+.btn-acc:hover{transform:translateY(-3px);box-shadow:0 14px 35px -10px rgba(212,175,55,.8)}
+.btn-acc:hover::after{transform:translateX(100%)}
+.btn-ghost{background:transparent;color:var(--sec);border:1.5px solid var(--line-strong,var(--line));transition:all .2s}
+.btn-ghost:hover{background:color-mix(in srgb,var(--acc) 12%,transparent);border-color:var(--acc);color:var(--acc)}
+.btn-wa{background:#1FAF55;color:#fff;box-shadow:0 8px 25px -8px rgba(31,175,85,.5)}
+.btn-wa:hover{background:#179346;transform:translateY(-2px)}
+.btn-sm{padding:.6rem 1.1rem;min-height:42px;font-size:.85rem}
 .btn-block{width:100%}
 
 /* sections */
-.sec{padding:clamp(3rem,7vw,5.5rem) 0}
-.eyebrow{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--acc-text,var(--acc));margin-bottom:.8rem}
-.sec-h{display:flex;justify-content:space-between;align-items:end;gap:1rem;flex-wrap:wrap;margin-bottom:2rem}
-.sec-h h2{font-size:clamp(1.8rem,4vw,2.8rem);margin:0}
+.sec{padding:clamp(3.5rem,8vw,6rem) 0}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--acc-text,var(--acc));margin-bottom:.8rem}
+.sec-h{display:flex;justify-content:space-between;align-items:end;gap:1rem;flex-wrap:wrap;margin-bottom:2.2rem}
+.sec-h h2{font-size:clamp(2rem,4.2vw,3.2rem);margin:0}
 .muted{color:var(--muted)}
 
 /* countdown */
 .cd{display:inline-flex;gap:.5rem;align-items:stretch}
-.cd b{display:flex;flex-direction:column;align-items:center;min-width:62px;padding:.55rem .4rem;border-radius:var(--cd-r,10px);background:var(--cd-bg,color-mix(in srgb,var(--fg) 8%,transparent));font-family:var(--fcd,var(--fb));font-size:1.7rem;font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
-.cd b small{font-family:var(--fb);font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.7;margin-top:.35rem}
+.cd b{display:flex;flex-direction:column;align-items:center;min-width:64px;padding:.6rem .45rem;border-radius:10px;background:color-mix(in srgb,var(--fg) 6%,transparent);border:1px solid var(--line-strong);font-family:var(--fcd,var(--fb));font-size:1.8rem;font-weight:800;font-variant-numeric:tabular-nums;line-height:1;color:var(--acc);box-shadow:inset 0 2px 6px rgba(0,0,0,.3)}
+.cd b small{font-family:var(--fb);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.75;margin-top:.35rem}
 .cd-label{font-weight:700;font-size:.9rem;margin-bottom:.5rem;display:block}
 
-/* grid & cards */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.4rem}
-@media (max-width:560px){.grid{grid-template-columns:1fr 1fr;gap:.8rem}}
-.card{position:relative;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--r,16px);overflow:hidden;transition:transform .2s,box-shadow .2s}
-.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(0,0,0,.45)}
-.card-media{position:relative;aspect-ratio:1;overflow:hidden;background:var(--media-bg,var(--sec))}
-.card-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.card:hover .card-media img{transform:scale(1.05)}
-.card-body{padding:1rem 1rem 1.1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
-.card-cat{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.card h3{font-size:1.05rem;margin:0;font-family:var(--fcard,var(--fd))}
-.card h3 a{text-decoration:none}
-.card h3 a::after{content:"";position:absolute;inset:0;z-index:1}
-.card .add{position:relative;z-index:2;margin-top:auto}
+/* grid & cards with floating hover */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.6rem}
+@media (max-width:560px){.grid{grid-template-columns:1fr 1fr;gap:.9rem}}
+.card{position:relative;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--r,12px);overflow:hidden;transition:transform .45s cubic-bezier(.16, 1, 0.3, 1), box-shadow .45s cubic-bezier(.16, 1, 0.3, 1), border-color .45s;will-change:transform,box-shadow;isolation:isolate}
+.card:hover{transform:translate3d(0,-10px,0);box-shadow:0 30px 60px -15px rgba(0,0,0,0.6), 0 0 20px 2px rgba(212,175,55,0.22);border-color:var(--acc)}
+.card-media{position:relative;aspect-ratio:1;overflow:hidden;background:var(--media-bg,#16161C)}
+.card-media::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.7s cubic-bezier(.16, 1, 0.3, 1);
+}
+.card:hover .card-media::after {
+  left: 150%;
+}
+.card-media img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16, 1, 0.3, 1)}
+.card:hover .card-media img{transform:scale(1.1) rotate(0.8deg)}
+.card .add{position:absolute;left:1.2rem;right:1.2rem;bottom:1.2rem;z-index:10;transform:translate3d(0,15px,0);opacity:0;transition:transform .35s cubic-bezier(.16, 1, 0.3, 1), opacity .35s, background .2s;background:linear-gradient(135deg,#E9C85B,#D4AF37);color:#0B0B0F}
+.card:hover .add{transform:translate3d(0,0,0);opacity:1;box-shadow:0 6px 15px rgba(212,175,55,0.4)}
+.card-body{padding:1.1rem 1.2rem 1.3rem;display:flex;flex-direction:column;gap:.4rem;flex:1;transition:background-color .45s cubic-bezier(.16, 1, 0.3, 1);padding-bottom:3.8rem}
+.card:hover .card-body{background:rgba(212,175,55,0.015)}
 .stars{color:var(--star,#F5A524);font-size:.85rem;letter-spacing:.05em}
-.stars span{color:var(--muted);letter-spacing:0;margin-left:.25rem}
-.price{display:flex;align-items:baseline;gap:.5rem;flex-wrap:wrap;font-variant-numeric:tabular-nums}
-.price strong{font-size:1.15rem;font-weight:800;color:var(--price,var(--fg))}
-.price s{color:var(--muted);font-size:.88rem}
-.badge{position:absolute;top:.7rem;left:.7rem;z-index:2;background:var(--acc);color:var(--on-acc);font-size:.72rem;font-weight:800;padding:.3rem .55rem;border-radius:var(--badge-r,6px);letter-spacing:.03em;text-transform:uppercase}
-.badge.alt{left:auto;right:.7rem;background:var(--fg);color:var(--bg)}
-.stock{font-size:.78rem;font-weight:700;color:var(--warn,#E5484D)}
+.stars span{color:var(--muted);letter-spacing:0;margin-left:.3rem}
+.price{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap;font-variant-numeric:tabular-nums}
+.price strong{font-size:1.2rem;font-weight:800;color:var(--acc)}
+.price s{color:var(--muted);font-size:.9rem}
+.badge{position:absolute;top:.8rem;left:.8rem;z-index:2;background:var(--acc);color:var(--on-acc);font-size:.72rem;font-weight:800;padding:.35rem .65rem;border-radius:6px;letter-spacing:.04em;text-transform:uppercase;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+.badge.alt{left:auto;right:.8rem;background:var(--fg);color:var(--bg)}
+.stock{font-size:.78rem;font-weight:700;color:#E5484D}
 .bar{height:6px;border-radius:9px;background:color-mix(in srgb,var(--fg) 12%,transparent);overflow:hidden}
-.bar i{display:block;height:100%;background:var(--acc);border-radius:9px}
-@media (max-width:560px){.card-body{padding:.75rem}.card h3{font-size:.95rem}.price strong{font-size:1rem}.card .add{font-size:.82rem;padding:.55rem .6rem}}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,#E9C85B,#D4AF37);border-radius:9px;transition:width .4s ease}
+@media (max-width:760px){.card-body{padding:.9rem;padding-bottom:3.8rem}}
+@media (max-width:560px){.card-body{padding:.8rem;padding-bottom:3.8rem}.card h3{font-size:.95rem}.price strong{font-size:1.05rem}.card .add{font-size:.82rem;padding:.55rem .6rem}}
+@media (hover: none) {
+  .card .add {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    opacity: 1 !important;
+    margin-top: auto !important;
+    font-size: .82rem !important;
+    padding: .55rem .6rem !important;
+    min-height: 38px !important;
+    box-shadow: none !important;
+  }
+  .card-body {
+    padding-bottom: 1.1rem !important;
+  }
+}
 
 /* chips */
-.chips{display:flex;gap:.5rem;flex-wrap:wrap}
-.chip{border:1.5px solid var(--line-strong,var(--line));background:transparent;border-radius:999px;padding:.5rem 1rem;font-weight:700;font-size:.88rem}
-.chip[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.chips{display:flex;gap:.6rem;flex-wrap:wrap}
+.chip{border:1.5px solid var(--line-strong,var(--line));background:transparent;border-radius:999px;padding:.55rem 1.1rem;font-weight:700;font-size:.9rem;transition:all .2s;color:var(--muted)}
+.chip:hover{border-color:var(--acc);color:var(--acc)}
+.chip[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg);box-shadow:0 4px 15px rgba(255,255,255,.2)}
 .toolbar{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center;margin:1.5rem 0 2rem}
-.select{border:1.5px solid var(--line-strong,var(--line));background:var(--surface);border-radius:10px;padding:.55rem .8rem;font-weight:600}
+.select{border:1.5px solid var(--line-strong,var(--line));background:var(--surface);border-radius:10px;padding:.6rem 1rem;font-weight:600;color:var(--fg);outline:none;transition:border-color .2s}
+.select:focus{border-color:var(--acc)}
 
 /* product page */
-.crumbs{font-size:.85rem;color:var(--muted);margin:1.5rem 0}
-.crumbs a{text-decoration:none}
-.pdp{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+.crumbs{font-size:.88rem;color:var(--muted);margin:1.5rem 0}
+.crumbs a{text-decoration:none;transition:color .2s}
+.crumbs a:hover{color:var(--acc)}
+.pdp{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(2rem,4vw,4rem);align-items:start}
 @media (max-width:860px){.pdp{grid-template-columns:1fr}}
-.pdp-media{position:sticky;top:90px;border-radius:var(--r,16px);overflow:hidden;background:var(--media-bg,var(--sec));aspect-ratio:1}
+.pdp-media{position:sticky;top:90px;border-radius:18px;overflow:hidden;background:var(--media-bg,#16161C);aspect-ratio:1;box-shadow:0 20px 50px -20px rgba(0,0,0,.5)}
 @media (max-width:860px){.pdp-media{position:relative;top:0}}
 .pdp-media img{width:100%;height:100%;object-fit:cover}
 .pdp-media.combo{display:grid;grid-template-columns:1fr 1fr;gap:4px}
-.pdp h1{font-size:clamp(1.8rem,3.6vw,2.6rem)}
-.pdp .price strong{font-size:1.9rem}
-.save{display:inline-block;background:color-mix(in srgb,var(--acc) 18%,transparent);color:var(--acc-text,var(--acc));font-weight:800;font-size:.85rem;padding:.3rem .6rem;border-radius:6px}
-.opt-label{font-weight:700;font-size:.9rem;margin:1.2rem 0 .5rem;display:block}
-.qty{display:inline-flex;border:1.5px solid var(--line-strong,var(--line));border-radius:10px;overflow:hidden}
-.qty button{width:44px;height:48px;border:0;background:transparent;font-size:1.2rem;font-weight:700}
-.qty output{width:44px;display:grid;place-items:center;font-weight:800}
-.buy-row{display:flex;gap:.75rem;margin:1.4rem 0 1rem;flex-wrap:wrap}
-.buy-row .btn-acc{flex:1;min-width:200px}
-.info-list{list-style:none;padding:0;margin:1.2rem 0;display:grid;gap:.6rem;font-size:.92rem}
-.info-list li{display:flex;gap:.6rem;align-items:flex-start}
-.info-list svg{width:20px;height:20px;flex:none;color:var(--acc-text,var(--acc));margin-top:1px}
-.box{border:1px solid var(--line);border-radius:var(--r,16px);padding:1.1rem 1.2rem;background:var(--surface)}
-.pdp details{border-top:1px solid var(--line);padding:1rem 0}
-.pdp summary{font-weight:800;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
-.pdp summary::after{content:"+";font-size:1.3rem;line-height:1}
+.pdp h1{font-size:clamp(2rem,3.8vw,2.8rem)}
+.pdp .price strong{font-size:2rem}
+.save{display:inline-block;background:color-mix(in srgb,var(--acc) 20%,transparent);color:var(--acc);font-weight:800;font-size:.88rem;padding:.35rem .7rem;border-radius:6px}
+.opt-label{font-weight:700;font-size:.92rem;margin:1.4rem 0 .6rem;display:block}
+.qty{display:inline-flex;border:1.5px solid var(--line-strong,var(--line));border-radius:10px;overflow:hidden;background:var(--surface)}
+.qty button{width:46px;height:48px;border:0;background:transparent;font-size:1.3rem;font-weight:700;transition:background .2s}
+.qty button:hover{background:color-mix(in srgb,var(--acc) 15%,transparent)}
+.qty output{width:48px;display:grid;place-items:center;font-weight:800;font-variant-numeric:tabular-nums}
+.buy-row{display:flex;gap:.8rem;margin:1.5rem 0 1.2rem;flex-wrap:wrap}
+.buy-row .btn-acc{flex:1;min-width:220px}
+.info-list{list-style:none;padding:0;margin:1.4rem 0;display:grid;gap:.7rem;font-size:.95rem}
+.info-list li{display:flex;gap:.7rem;align-items:flex-start}
+.info-list svg{width:22px;height:22px;flex:none;color:var(--acc);margin-top:1px}
+.box{border:1px solid var(--line);border-radius:16px;padding:1.2rem 1.4rem;background:var(--surface)}
+.pdp details{border-top:1px solid var(--line);padding:1.1rem 0}
+.pdp summary{font-weight:800;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.pdp summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--acc)}
 .pdp details[open] summary::after{content:"–"}
-.sticky-buy{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--bg);border-top:1px solid var(--line);padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));display:none;gap:.8rem;align-items:center;box-shadow:0 -10px 30px -15px rgba(0,0,0,.4)}
-.sticky-buy .price strong{font-size:1.1rem}
+.sticky-buy{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--bg);border-top:1px solid var(--line);padding:.8rem 1.2rem calc(.8rem + env(safe-area-inset-bottom));display:none;gap:1rem;align-items:center;box-shadow:0 -15px 40px -15px rgba(0,0,0,.6)}
+.sticky-buy .price strong{font-size:1.2rem}
 .sticky-buy .btn{flex:1}
-@media (max-width:860px){body.on-pdp .sticky-buy.show{display:flex}body.on-pdp .wa-float{bottom:5.5rem}}
+@media (max-width:860px){body.on-pdp .sticky-buy.show{display:flex}body.on-pdp .wa-float{bottom:5.8rem}}
 
 /* reviews */
-.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
-.review{background:var(--surface);border:1px solid var(--line);border-radius:var(--r,16px);padding:1.4rem}
-.review p{margin:.6rem 0 .8rem}
-.review footer{font-size:.85rem;color:var(--muted);font-weight:600}
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.review{background:transparent;border:0;border-top:1px solid var(--line-strong);border-radius:0;padding:1.5rem 0;margin:0}
+.review p{font-family:var(--fd);font-size:1.2rem;font-style:italic;margin:.7rem 0 .9rem;line-height:1.4;color:var(--sec)}
+.review footer{font-size:.88rem;color:var(--muted);font-weight:700}
 
 /* faq */
-.faq{max-width:820px}
-.faq details{border-bottom:1px solid var(--line);padding:1.1rem 0}
-.faq summary{font-weight:700;cursor:pointer;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;gap:1rem}
-.faq summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--acc-text,var(--acc))}
+.faq{max-width:860px}
+.faq details{border-bottom:1px solid var(--line);padding:1.2rem 0}
+.faq summary{font-weight:700;cursor:pointer;font-size:1.1rem;list-style:none;display:flex;justify-content:space-between;gap:1rem;align-items:center}
+.faq summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--acc)}
 .faq details[open] summary::after{content:"–"}
-.faq details p{margin:.8rem 0 0;color:var(--muted)}
-
-/* trust */
-.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-@media (max-width:860px){.trust{grid-template-columns:1fr 1fr}}
-.trust div{display:flex;gap:.75rem;align-items:flex-start;font-size:.9rem}
-.trust svg{width:28px;height:28px;flex:none;color:var(--acc-text,var(--acc))}
-.trust b{display:block;font-size:.95rem}
+.faq details p{margin:.9rem 0 0;color:var(--muted);font-size:.98rem;line-height:1.6}
 
 /* drawer */
-.overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:80;opacity:0;pointer-events:none;transition:opacity .25s}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:80;opacity:0;pointer-events:none;transition:opacity .3s ease}
 .overlay.open{opacity:1;pointer-events:auto}
-.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--drawer-bg,var(--bg));color:var(--fg);z-index:90;transform:translateX(100%);transition:transform .3s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;box-shadow:-20px 0 50px -20px rgba(0,0,0,.5)}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--drawer-bg,#0E0E13);color:var(--fg);z-index:90;transform:translateX(100%);transition:transform .35s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;box-shadow:-25px 0 60px -20px rgba(0,0,0,.7)}
 .drawer.open{transform:none}
-.drawer-h{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 1.25rem;border-bottom:1px solid var(--line)}
-.drawer-h h2{font-size:1.3rem;margin:0}
-.x{background:transparent;border:0;font-size:1.6rem;line-height:1;width:44px;height:44px}
-.drawer-b{flex:1;overflow:auto;padding:1rem 1.25rem}
-.drawer-f{border-top:1px solid var(--line);padding:1rem 1.25rem calc(1rem + env(safe-area-inset-bottom));display:grid;gap:.6rem}
-.ship{font-size:.85rem;font-weight:600;display:grid;gap:.4rem;margin-bottom:1rem}
-.line{display:grid;grid-template-columns:64px 1fr auto;gap:.8rem;align-items:center;padding:.8rem 0;border-bottom:1px solid var(--line)}
-.line img{width:64px;height:64px;object-fit:cover;border-radius:10px}
-.line h4{font-family:var(--fb);font-size:.92rem;margin:0 0 .2rem}
+.drawer-h{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.4rem;border-bottom:1px solid var(--line)}
+.drawer-h h2{font-size:1.4rem;margin:0}
+.x{background:transparent;border:0;font-size:1.8rem;line-height:1;width:44px;height:44px;display:grid;place-items:center;border-radius:8px;transition:background .2s}
+.x:hover{background:rgba(255,255,255,.08)}
+.drawer-b{flex:1;overflow:auto;padding:1.2rem 1.4rem}
+.drawer-f{border-top:1px solid var(--line);padding:1.2rem 1.4rem calc(1.2rem + env(safe-area-inset-bottom));display:grid;gap:.8rem;background:rgba(0,0,0,.2)}
+.ship{font-size:.88rem;font-weight:600;display:grid;gap:.5rem;margin-bottom:1.2rem}
+.line{display:grid;grid-template-columns:72px 1fr auto;gap:1rem;align-items:center;padding:.9rem 0;border-bottom:1px solid var(--line)}
+.line img{width:72px;height:72px;object-fit:cover;border-radius:12px;background:#16161C}
+.line h4{font-family:var(--fb);font-size:.95rem;margin:0 0 .25rem;font-weight:700}
 .line .qty button{width:32px;height:32px;font-size:1rem}
-.line .qty output{width:28px}
-.rm{background:none;border:0;color:var(--muted);font-size:.8rem;text-decoration:underline;padding:0}
-.tot{display:flex;justify-content:space-between;font-weight:700}
-.tot.big{font-size:1.2rem;font-weight:800}
-.code-row{display:flex;gap:.5rem}
-.code-row input{flex:1;min-width:0;border:1.5px solid var(--line-strong,var(--line));border-radius:10px;background:transparent;padding:.6rem .8rem;text-transform:uppercase}
-.pay{display:flex;gap:.35rem;flex-wrap:wrap;justify-content:center}
-.pay span{font-size:.68rem;font-weight:800;border:1px solid var(--line);border-radius:5px;padding:.2rem .4rem;opacity:.85}
-.empty{text-align:center;padding:3rem 1rem;color:var(--muted)}
+.line .qty output{width:30px}
+.rm{background:none;border:0;color:var(--muted);font-size:.82rem;text-decoration:underline;padding:0;cursor:pointer;transition:color .2s}
+.rm:hover{color:#E5484D}
+.tot{display:flex;justify-content:space-between;font-weight:700;font-size:.95rem}
+.tot.big{font-size:1.25rem;font-weight:800;color:var(--acc);margin-top:.3rem;padding-top:.5rem;border-top:1px dashed var(--line)}
+.code-row{display:flex;gap:.6rem}
+.code-row input{flex:1;min-width:0;border:1.5px solid var(--line-strong,var(--line));border-radius:10px;background:var(--surface);padding:.65rem .9rem;text-transform:uppercase;font-weight:700;color:var(--fg);outline:none}
+.code-row input:focus{border-color:var(--acc)}
+.pay{display:flex;gap:.4rem;flex-wrap:wrap;justify-content:center;margin-top:.4rem}
+.pay span{font-size:.7rem;font-weight:800;border:1px solid var(--line-strong);border-radius:6px;padding:.25rem .5rem;opacity:.9;background:rgba(212,175,55,.05);color:var(--sec)}
+.empty{text-align:center;padding:3.5rem 1rem;color:var(--muted)}
 
 /* modal */
 .modal{position:fixed;inset:0;z-index:120;display:grid;place-items:center;padding:1rem}
-.modal-card{position:relative;background:var(--drawer-bg,var(--bg));color:var(--fg);border-radius:var(--r,16px);padding:2rem;max-width:480px;width:100%;border:1px solid var(--line);box-shadow:0 30px 80px -20px rgba(0,0,0,.6);animation:pop .3s}
-@keyframes pop{from{transform:scale(.94);opacity:0}}
-.modal-bg{position:absolute;inset:0;background:rgba(0,0,0,.6)}
+.modal-card{position:relative;background:var(--drawer-bg,#121218);color:var(--fg);border-radius:18px;padding:2.2rem;max-width:500px;width:100%;border:1px solid var(--line-strong);box-shadow:0 35px 90px -25px rgba(0,0,0,.7);animation:pop .3s cubic-bezier(.175,.885,.32,1.275)}
+@keyframes pop{from{transform:scale(.92);opacity:0}}
+.modal-bg{position:absolute;inset:0;background:rgba(0,0,0,.65);backdrop-filter:blur(4px)}
 
 /* toast */
-.toast{position:fixed;left:50%;bottom:1.5rem;transform:translate(-50%,200%);opacity:0;visibility:hidden;background:var(--fg);color:var(--bg);padding:.85rem 1.2rem;border-radius:12px;font-weight:700;z-index:130;transition:transform .3s;max-width:calc(100% - 2rem);font-size:.95rem}
+.toast{position:fixed;left:50%;bottom:2rem;transform:translate(-50%,200%);opacity:0;visibility:hidden;background:var(--fg);color:var(--bg);padding:.9rem 1.4rem;border-radius:14px;font-weight:800;z-index:130;transition:transform .3s cubic-bezier(.175,.885,.32,1.275),opacity .3s;max-width:calc(100% - 2.5rem);font-size:.95rem;box-shadow:0 15px 35px rgba(0,0,0,.5)}
 .toast.show{transform:translate(-50%,0);opacity:1;visibility:visible}
 
 /* whatsapp float */
-.wa-float{position:fixed;right:1rem;bottom:1rem;z-index:45;width:56px;height:56px;border-radius:50%;background:#1FAF55;color:#fff;display:grid;place-items:center;box-shadow:0 10px 30px -8px rgba(0,0,0,.5);transition:bottom .2s}
-.wa-float svg{width:30px;height:30px}
+.wa-float{position:fixed;right:1.2rem;bottom:1.2rem;z-index:45;width:60px;height:60px;border-radius:50%;background:#1FAF55;color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(31,175,85,.6);transition:transform .2s,bottom .2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:32px;height:32px}
 
 /* footer */
-.ftr{border-top:1px solid var(--line);padding:3.5rem 0 2rem;font-size:.9rem;background:var(--ftr-bg,transparent)}
-.ftr-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:2rem}
+.ftr{border-top:1px solid var(--line);padding:4rem 0 2.2rem;font-size:.9rem;background:#070709}
+.ftr-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:2.5rem}
 .ftr-grid>*{min-width:0}.ftr form{max-width:100%}.ftr input{min-width:0}
 @media (max-width:760px){.ftr-grid{grid-template-columns:1fr 1fr}}
-.ftr h4{font-family:var(--fb);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem}
-.ftr ul{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
-.ftr a{text-decoration:none;opacity:.8}
-.ftr a:hover{opacity:1}
-.ftr-b{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--muted);font-size:.8rem}
-.news{display:flex;gap:.5rem;margin-top:.8rem}
-.news input{flex:1;min-width:0;border:1.5px solid var(--line-strong,var(--line));border-radius:10px;background:transparent;padding:.7rem .8rem}
+.ftr h4{font-family:var(--fb);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:1.2rem;color:var(--sec)}
+.ftr ul{list-style:none;padding:0;margin:0;display:grid;gap:.6rem}
+.ftr a{text-decoration:none;opacity:.8;transition:opacity .2s}
+.ftr a:hover{opacity:1;color:var(--acc)}
+.ftr-b{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--muted);font-size:.82rem}
+.news{display:flex;gap:.6rem;margin-top:.9rem}
+.news input{flex:1;min-width:0;border:1.5px solid var(--line-strong,var(--line));border-radius:10px;background:var(--surface);padding:.75rem .9rem;outline:none;color:var(--fg)}
+.news input:focus{border-color:var(--acc)}
 
-/* reveal */
-.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+/* reveal & staggered fade-in animations with translate3d for GPU acceleration */
+.rv{opacity:0;transform:translate3d(0,32px,0);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);will-change:opacity,transform}
 .rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+.rv-delay-1{transition-delay:.08s}
+.rv-delay-2{transition-delay:.16s}
+.rv-delay-3{transition-delay:.24s}
+.rv-delay-4{transition-delay:.32s}
+
+/* "souffle de paillettes" text animation classes */
+.glitter-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translate3d(0, 10px, 0) scale(0.95);
+  animation: charAppear 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: opacity, transform, text-shadow;
+}
+@keyframes charAppear {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0) scale(0.95);
+    text-shadow: 0 0 12px rgba(212, 175, 55, 0.9);
+    color: var(--acc);
+  }
+  50% {
+    opacity: 0.85;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 10px var(--acc);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+    text-shadow: none;
+    color: inherit;
+  }
+}
+.sparkle-char {
+  position: relative;
+}
+.sparkle-char::after {
+  content: '✦';
+  position: absolute;
+  top: -8px;
+  right: -4px;
+  font-size: 0.65rem;
+  color: var(--acc);
+  animation: particleBlow 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  pointer-events: none;
+}
+@keyframes particleBlow {
+  0% { transform: translate3d(0, 0, 0) scale(0) rotate(0deg); opacity: 0; }
+  50% { transform: translate3d(5px, -14px, 0) scale(1.3) rotate(90deg); opacity: 1; }
+  100% { transform: translate3d(10px, -28px, 0) scale(0) rotate(180deg); opacity: 0; }
+}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}.glitter-char{opacity:1!important;transform:none!important;animation:none!important}}
 
 [tabindex="-1"]:focus{outline:none}
-@media (max-width:560px){.promo{font-size:.78rem;padding:.45rem .8rem}.promo .dm{display:none}}
+@media (max-width:560px){.promo{font-size:.78rem;padding:.5rem .8rem}.promo .dm{display:none}}
+
+/* luxury ornament details */
+.ornament{display:flex;justify-content:center;gap:1rem;color:var(--acc);margin:3rem 0;opacity:0.6;font-size:1.2rem;user-select:none;pointer-events:none}
+
+/* live stock & social pulse animation */
+@keyframes pulseGlow {
+  0% { transform: scale(0.9); opacity: 0.6; box-shadow: 0 0 0 0 rgba(233,200,91,0.5); }
+  50% { transform: scale(1.1); opacity: 1; box-shadow: 0 0 10px 4px rgba(233,200,91,0.3); }
+  100% { transform: scale(0.9); opacity: 0.6; box-shadow: 0 0 0 0 rgba(233,200,91,0); }
+}
 
 /* ===== thème minuit-dore ===== */
 :root{--bg:#0B0B0F;--sec:#F7E7CE;--acc:#D4AF37;--on-acc:#0B0B0F;--fg:#F4EFE6;--muted:#A9A39A;--surface:#131318;--line:rgba(247,231,206,.14);--line-strong:rgba(212,175,55,.45);
---fd:'Bodoni Moda',serif;--fdw:500;--fdls:-.01em;--fb:'Manrope',system-ui,sans-serif;--r:0;--btn-r:0;--badge-r:0;--media-bg:#16161C;--cd-bg:transparent;--promo-bg:#D4AF37;--promo-fg:#0B0B0F;--hdr-bg:rgba(11,11,15,.88);--fcd:'Bodoni Moda',serif;--star:#D4AF37}
+--fd:'Bodoni Moda',serif;--fdw:500;--fdls:-.01em;--fb:'Manrope',system-ui,sans-serif;--r:12px;--btn-r:12px;}
 h1 em,h2 em{font-style:italic;color:var(--acc)}
-.btn{letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;padding:1rem 1.7rem}
-.btn-acc{background:linear-gradient(135deg,#E9C85B,#D4AF37 45%,#A8841F);color:#0B0B0F}
-.btn-ghost{border-color:var(--sec);color:var(--sec)}
-.cd b{border:1px solid var(--line-strong);color:var(--acc)}
-.hero{position:relative;min-height:min(92vh,820px);display:flex;align-items:center;overflow:hidden}
-.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0B0B0F 38%,rgba(11,11,15,.75) 58%,rgba(11,11,15,0) 82%);z-index:1}
-.hero-in{position:relative;z-index:2;padding:4rem 0}
-.hero h1{font-size:clamp(2.8rem,6.2vw,5.6rem);line-height:.98;text-shadow:0 2px 24px rgba(0,0,0,.6)}
-.lead{max-width:44ch;color:#CFC8BC;font-size:1.08rem}
-.hero-cta{display:flex;gap:.8rem;flex-wrap:wrap;margin:1.8rem 0 2rem}
-@media (max-width:760px){.hero{min-height:auto}.hero::before{background:linear-gradient(0deg,#0B0B0F 50%,rgba(11,11,15,0) 90%)}.hero-in{padding:15rem 0 2.5rem}.hero-img{height:60%;object-position:80% top}}
+.hero{position:relative;min-height:min(92vh,850px);display:flex;align-items:center;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center;transform:scale(1.03);animation:zoomSlow 20s infinite alternate}
+@keyframes zoomSlow{0%{transform:scale(1)}100%{transform:scale(1.08)}}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0B0B0F 38%,rgba(11,11,15,.78) 58%,rgba(11,11,15,0) 85%);z-index:1}
+.hero-in{position:relative;z-index:2;padding:4.5rem 0}
+.hero h1{font-size:clamp(2.8rem,6.4vw,5.8rem);line-height:.96;text-shadow:0 4px 30px rgba(0,0,0,.7);margin-bottom:1rem}
+.lead{max-width:46ch;color:#CFC8BC;font-size:1.1rem;line-height:1.6}
+.hero-cta{display:flex;gap:.9rem;flex-wrap:wrap;margin:1.8rem 0 2.2rem}
+@media (max-width:760px){.hero{min-height:auto}.hero::before{background:linear-gradient(0deg,#0B0B0F 55%,rgba(11,11,15,0) 92%)}.hero-in{padding:16rem 0 2.5rem}.hero-img{height:58%;object-position:80% top}}
 .confetti{position:fixed;inset:0;pointer-events:none;z-index:200}
-.look{display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:center}
-@media (max-width:900px){.look{grid-template-columns:1fr;gap:2rem}}
-.look-vis{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:repeat(3,1fr);gap:.6rem}
-.look-vis img{width:100%;height:100%;object-fit:cover}
+.look{display:grid;grid-template-columns:1.1fr 1fr;gap:4.5rem;align-items:center}
+@media (max-width:900px){.look{grid-template-columns:1fr;gap:2.5rem}}
+.look-vis{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:repeat(3,1fr);gap:.7rem}
+.look-vis img{width:100%;height:100%;object-fit:cover;border-radius:12px;box-shadow:0 12px 35px -10px rgba(0,0,0,0.5)}
 .lv-main{grid-row:1/4;aspect-ratio:3/4}
 .look-txt h2{font-size:clamp(2.2rem,4.4vw,3.6rem)}
-.look-l{list-style:none;padding:0;margin:1.5rem 0}
-.look-l li{display:flex;justify-content:space-between;padding:.8rem 0;border-bottom:1px solid var(--line)}
-.look-l b{font-weight:500;color:var(--muted)}
-.look-tot{display:grid;gap:.2rem;margin-bottom:1.5rem}
-.look-tot span{color:var(--muted);font-size:.9rem}
-.look-tot strong{font-family:var(--fd);font-size:2.6rem;color:var(--acc);font-weight:500}
-.look-tot em{font-style:normal;font-size:.85rem;color:var(--sec)}
+.look-l{list-style:none;padding:0;margin:1.6rem 0}
+.look-l li{display:flex;justify-content:space-between;padding:.85rem 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.look-l b{font-weight:600;color:var(--sec)}
+.look-tot{display:grid;gap:.3rem;margin-bottom:1.6rem}
+.look-tot span{color:var(--muted);font-size:.92rem}
+.look-tot strong{font-family:var(--fd);font-size:2.8rem;color:var(--acc);font-weight:500}
+.look-tot em{font-style:normal;font-size:.88rem;color:var(--sec);font-weight:600}
 .look-cta{display:flex;gap:.8rem;flex-wrap:wrap}
-.small{font-size:.82rem;margin-top:.8rem}
-.sec-h h2{font-size:clamp(2rem,4vw,3.2rem)}
-.card{background:transparent;border:0}.card:hover{transform:none;box-shadow:none}
-.card-media{background:#16161C}
-.card:hover .card-media img{transform:scale(1.04)}
-.card-body{padding:1rem 0}
-.card h3{font-family:var(--fd);font-size:1.25rem;font-weight:500}
-.card .add{background:transparent;color:var(--acc);border:1px solid var(--line-strong)}.card .add:hover{background:var(--acc);color:#0B0B0F}
-.price strong{color:var(--acc)}
-.badge{background:var(--acc);color:#0B0B0F}
-.clock-sec{background:radial-gradient(ellipse at 50% 0,rgba(212,175,55,.18),transparent 60%),#08080B;border-block:1px solid var(--line)}
-.clock-sec h2{font-size:clamp(1.8rem,3.6vw,2.8rem)}
-.bigclock{display:flex;justify-content:center;gap:clamp(.8rem,4vw,3rem);margin:2rem 0 1.5rem;flex-wrap:wrap}
-.bigclock span{display:grid;min-width:clamp(70px,14vw,150px)}
-.bigclock b{font-family:var(--fd);font-weight:500;font-size:clamp(3rem,10vw,7.5rem);line-height:1;color:var(--sec);font-variant-numeric:tabular-nums}
-.bigclock i{font-style:normal;text-transform:uppercase;letter-spacing:.2em;font-size:.7rem;color:var(--acc);margin-top:.5rem}
+.small{font-size:.85rem;margin-top:.9rem}
+.clock-sec{background:radial-gradient(ellipse at 50% 0,rgba(212,175,55,.18),transparent 65%),#08080B;border-block:1px solid var(--line)}
+.clock-sec h2{font-size:clamp(2rem,4vw,3rem)}
+.bigclock{display:flex;justify-content:center;gap:clamp(1rem,4vw,3.2rem);margin:2.2rem 0 1.6rem;flex-wrap:wrap}
+.bigclock span{display:grid;min-width:clamp(75px,14vw,150px)}
+.bigclock b{font-family:var(--fd);font-weight:500;font-size:clamp(3.2rem,10.5vw,7.8rem);line-height:1;color:var(--sec);font-variant-numeric:tabular-nums;text-shadow:0 0 40px rgba(212,175,55,.3)}
+.bigclock i{font-style:normal;text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;color:var(--acc);margin-top:.6rem;font-weight:700}
 .bigclock .ny{font-family:var(--fd);font-size:clamp(4rem,14vw,10rem);color:var(--acc);font-style:italic}
-.review{background:transparent;border:0;border-top:1px solid var(--line-strong);border-radius:0;padding:1.4rem 0}
-.review p{font-family:var(--fd);font-size:1.2rem;font-style:italic}
-.newyear .promo{background:#F7E7CE}
-.shop-hero{padding:1rem 0 0}.shop-hero h1{font-size:clamp(2.4rem,5vw,3.6rem)}
-.ftr{background:#070709}
-
+.newyear .promo{background:#F7E7CE;color:#0B0B0F}
+.shop-hero{padding:1.5rem 0 0}.shop-hero h1{font-size:clamp(2.5rem,5.2vw,3.8rem)}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Aller au contenu</a>
-<div class="promo" role="region" aria-label="Offre en cours"><span>Réveillon 2027 · Look complet -15 %</span><span class="dm">·</span><span class="dm">Commandez avant le 29 décembre pour être prête le 31</span></div>
+<div class="promo" role="region" aria-label="Offre en cours">
+  <span>Réveillon 2027 · Look complet à -15\u202f%</span>
+  <span class="dm">·</span>
+  <span>Commandez avant le 29 décembre pour être livrée à Cotonou avant le 31</span>
+  <span class="dm">·</span>
+  <button data-copy="MINUIT10">Code MINUIT10</button>
+</div>
 <header class="hdr"><div class="wrap">
-<a class="logo" href="#/" aria-label="Minuit Doré, accueil"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="none" stroke="var(--acc)" stroke-width="1.4"/><path d="M20 8v12" stroke="var(--acc)" stroke-width="1.6"/><path d="M20 20l-5-4" stroke="var(--sec)" stroke-width="1.6"/><circle cx="20" cy="20" r="1.8" fill="var(--acc)"/></svg><span>MINUIT <span style="color:var(--acc)">DORÉ</span></span></a>
-<nav class="nav" aria-label="Navigation principale"><a href="#/boutique">La collection</a><a href="#look">Le look complet</a><a href="#minuit">Compte à rebours</a><a href="#faq">Livraison</a></nav>
-<button class="cart-btn" data-open-cart aria-label="Ouvrir le panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 13H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cart-label">Panier</span><span class="cart-count">0</span></button>
+<a class="logo" href="#/" aria-label="Minuit Doré, accueil">
+  <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="none" stroke="var(--acc)" stroke-width="1.4"/><path d="M20 8v12" stroke="var(--acc)" stroke-width="1.6"/><path d="M20 20l-5-4" stroke="var(--sec)" stroke-width="1.6"/><circle cx="20" cy="20" r="1.8" fill="var(--acc)"/></svg>
+  <span>MINUIT <span style="color:var(--acc)">DORÉ</span></span>
+</a>
+<nav class="nav" aria-label="Navigation principale">
+  <a href="#/boutique">La collection</a>
+  <a href="#look">Le look complet</a>
+  <a href="#minuit">Compte à rebours</a>
+  <a href="#faq">Livraison & FAQ</a>
+</nav>
+<button class="cart-btn" data-open-cart aria-label="Ouvrir le panier">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 13H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+  <span class="cart-label">Panier</span>
+  <span class="cart-count">0</span>
+</button>
 </div></header>
+
 <main id="main">
 <div data-view="home">
+
 <section class="hero">
- <img class="hero-img" src="img/hero.webp" alt="Femme en robe à sequins dorés levant une coupe lors d'une soirée" width="1600" height="900" fetchpriority="high">
+ <img class="hero-img" src="img/hero.webp" alt="Femme élégante en robe à sequins dorés levant une coupe de champagne lors du Réveillon à Cotonou" width="1600" height="900" fetchpriority="high">
  <div class="wrap hero-in">
-  <span class="eyebrow">Réveillon du 31 décembre 2026</span>
-  <h1 id="h-title">Brillez jusqu'à <em>minuit</em>.<br>Et bien après.</h1>
-  <p class="lead" id="h-lead">Robes à sequins, pochettes dorées, bijoux et escarpins. Composez votre look du Réveillon en un clic, livré à Cotonou avant le 31.</p>
-  <div class="hero-cta"><a class="btn btn-acc" id="h-cta" href="#look">Voir le look complet</a><a class="btn btn-ghost" href="#/boutique">La collection</a></div>
-  <div class="hero-cd"><span class="cd-label" data-cd-label></span><div class="cd" data-cd></div></div>
+  <span class="eyebrow rv">Réveillon du 31 décembre 2026 · Cotonou</span>
+  <h1 id="h-title" class="rv rv-delay-1">Brillez jusqu'à <em>minuit</em>.<br>Et bien après.</h1>
+  <p class="lead rv rv-delay-2" id="h-lead">Grâce à Minuit Doré, trouvez votre look complet du Réveillon en un clic, sans craindre qu'il n'arrive pas à temps. Robes à sequins, pochettes dorées, bijoux et escarpins livrés chez vous à Cotonou, Calavi ou Haie Vive avant le 31.</p>
+  <div class="hero-cta rv rv-delay-3">
+    <a class="btn btn-acc" id="h-cta" href="#look">Découvrir le look complet</a>
+    <a class="btn btn-ghost" href="#/boutique">Explorer la collection</a>
+  </div>
+  <div class="hero-cd rv rv-delay-4">
+    <span class="cd-label" data-cd-label></span>
+    <div class="cd" data-cd></div>
+  </div>
  </div>
 </section>
 
+<div class="ornament">✦ ✧ ✦</div>
+
 <section class="sec" id="look"><div class="wrap look">
  <div class="look-vis rv">
-  <img class="lv-main" src="img/robe.webp" alt="Robe à sequins dorés" width="800" height="800" loading="lazy">
-  <img class="lv-a" src="img/pochette.webp" alt="Pochette dorée" width="400" height="400" loading="lazy">
-  <img class="lv-b" src="img/escarpins.webp" alt="Escarpins champagne" width="400" height="400" loading="lazy">
-  <img class="lv-c" src="img/boucles.webp" alt="Boucles d'oreilles dorées" width="400" height="400" loading="lazy">
+  <img class="lv-main" src="img/robe.webp" alt="Robe Sequins Minuit couleur champagne" width="800" height="800" loading="lazy">
+  <img class="lv-a" src="img/pochette.webp" alt="Pochette Étoile dorée en métal brossé" width="400" height="400" loading="lazy">
+  <img class="lv-b" src="img/escarpins.webp" alt="Escarpins Champagne avec talon 8 cm and bride cheville" width="400" height="400" loading="lazy">
+  <img class="lv-c" src="img/boucles.webp" alt="Boucles d'oreilles Minuit pendantes" width="400" height="400" loading="lazy">
  </div>
- <div class="look-txt rv">
-  <span class="eyebrow">Le look complet</span>
-  <h2>Quatre pièces. <em>Un clic.</em></h2>
+ <div class="look-txt rv rv-delay-2">
+  <span class="eyebrow">Solution Réveillon en un clic</span>
+  <h2>Quatre pièces. <em>Zéro stress.</em></h2>
+  
+  <div style="display: flex; align-items: center; gap: .5rem; margin: .8rem 0; font-size: .88rem; color: #E9C85B; font-weight: 600;">
+    <span style="display: inline-block; width: 8px; height: 8px; background: #E9C85B; border-radius: 50%; animation: pulseGlow 1.5s infinite;"></span>
+    <span>12 femmes à Cotonou consultent ce look en ce moment</span>
+  </div>
+
+  <p class="muted" style="margin-bottom:1.2rem">Tout est parfaitement coordonné pour faire sensation dès les premières minutes de 2027.</p>
   <ul class="look-l">
-   <li><span>Robe Sequins Minuit</span><b>39 900 F</b></li>
-   <li><span>Pochette Étoile dorée</span><b>14 900 F</b></li>
-   <li><span>Boucles d'oreilles Minuit</span><b>9 900 F</b></li>
-   <li><span>Escarpins Champagne</span><b>27 900 F</b></li>
+   <li><span>Robe Sequins Minuit</span><b>39 900 FCFA</b></li>
+   <li><span>Pochette Étoile dorée</span><b>14 900 FCFA</b></li>
+   <li><span>Boucles d'oreilles Minuit</span><b>9 900 FCFA</b></li>
+   <li><span>Escarpins Champagne</span><b>27 900 FCFA</b></li>
   </ul>
-  <div class="look-tot"><span>Séparément <s>92 600 F</s></span><strong>78 700 F CFA</strong><em>Vous économisez 13 900 F</em></div>
-  <div class="look-cta"><a class="btn btn-acc" href="#/produit/look">Choisir ma taille</a><button class="btn btn-ghost" data-add="look">Ajouter en taille M</button></div>
-  <p class="muted small">Essayage à la livraison, échange de taille gratuit.</p>
+  <div class="look-tot">
+    <span>Séparément <s>92 600 FCFA</s></span>
+    <strong>78 700 FCFA</strong>
+    <em>Vous économisez 13 900 FCFA (-15%)</em>
+  </div>
+  <div class="look-cta">
+    <a class="btn btn-acc" href="#/produit/look">Choisir ma taille (Look complet)</a>
+    <button class="btn btn-ghost" data-add="look">Ajouter en taille M</button>
+  </div>
+  <p class="muted small">Paiement Mobile Money ou à la livraison · Essayage à la livraison et échange de taille gratuit à Cotonou.</p>
  </div>
 </div></section>
+
+<div class="ornament">✦ ✧ ✦</div>
+
+<section class="sec" id="style-quiz" style="background: rgba(212, 175, 55, 0.03); border-block: 1px solid var(--line); padding: 4.5rem 0;">
+ <div class="wrap" style="max-width: 800px;">
+  <div style="text-align: center; margin-bottom: 2.5rem;" class="rv">
+    <span class="eyebrow">Expérience Interactive</span>
+    <h2>Trouvez votre Look de Réveillon</h2>
+    <p class="muted">Répondez à 3 questions rapides pour composer la silhouette idéale qui vous fera briller à Cotonou.</p>
+  </div>
+  
+  <div id="quiz-container" class="box rv rv-delay-1" style="background: var(--surface); border: 1px solid var(--line-strong); position: relative; overflow: hidden; min-height: 280px; display: flex; flex-direction: column; justify-content: center; padding: 2rem; border-radius: 12px;">
+    <!-- Step 1 -->
+    <div id="quiz-step-1" class="quiz-step">
+      <h3 style="font-family: var(--fb); font-size: 1.15rem; font-weight: 700; margin-bottom: 1.2rem; text-align: center;">1. Quelle est votre ambiance idéale pour fêter la nouvelle année ?</h3>
+      <div style="display: grid; grid-template-columns: 1fr; gap: .8rem;">
+        <button class="btn btn-ghost btn-sm quiz-opt" data-step="1" data-val="chic" style="text-transform: none; text-align: left; justify-content: flex-start; padding: 1.2rem;">✨ Un dîner chic & intime dans la Haie Vive</button>
+        <button class="btn btn-ghost btn-sm quiz-opt" data-step="1" data-val="dance" style="text-transform: none; text-align: left; justify-content: flex-start; padding: 1.2rem;">💃 Danser jusqu'au matin sous les étoiles de Fidjrossè beach</button>
+        <button class="btn btn-ghost btn-sm quiz-opt" data-step="1" data-val="stars" style="text-transform: none; text-align: left; justify-content: flex-start; padding: 1.2rem;">🌌 Une réception privative prestigieuse sur un rooftop</button>
+      </div>
+    </div>
+    
+    <!-- Step 2 -->
+    <div id="quiz-step-2" class="quiz-step" style="display: none;">
+      <h3 style="font-family: var(--fb); font-size: 1.15rem; font-weight: 700; margin-bottom: 1.2rem; text-align: center;">2. Quelle pièce forte souhaitez-vous mettre en valeur ?</h3>
+      <div style="display: grid; grid-template-columns: 1fr; gap: .8rem;">
+        <button class="btn btn-ghost btn-sm quiz-opt" data-step="2" data-val="robe" style="text-transform: none; text-align: left; justify-content: flex-start; padding: 1.2rem;">👗 La robe Sequins dorée qui attire tous les regards</button>
+        <button class="btn btn-ghost btn-sm quiz-opt" data-step="2" data-val="accessoires" style="text-transform: none; text-align: left; justify-content: flex-start; padding: 1.2rem;">👜 Des accessoires dorés raffinés (bijoux fins, pochette)</button>
+        <button class="btn btn-ghost btn-sm quiz-opt" data-step="2" data-val="beaute" style="text-transform: none; text-align: left; justify-content: flex-start; padding: 1.2rem;">💄 Un maquillage scintillant aux tons chauds</button>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div id="quiz-results" class="quiz-step" style="display: none; text-align: center;">
+      <span class="eyebrow" style="color: var(--acc);">Votre recommandation sur-mesure</span>
+      <h3 id="result-title" style="font-family: var(--fd); font-size: 1.8rem; margin: .5rem 0 .8rem; font-weight: 500;">Le Silhouette Prestige</h3>
+      <p id="result-text" class="muted" style="max-width: 500px; margin: 0 auto 1.5rem; line-height: 1.6;">Pour votre réveillon, l'accord parfait réunit la robe sequins or champagne et des accessoires scintillants.</p>
+      <div style="display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap;">
+        <button id="quiz-add-btn" class="btn btn-acc btn-sm" style="min-height: 44px;">Ajouter la sélection au panier</button>
+        <button id="quiz-reset-btn" class="btn btn-ghost btn-sm" style="min-height: 44px;">Recommencer le quiz</button>
+      </div>
+    </div>
+  </div>
+ </div>
+</section>
+
+<div class="ornament">✦ ✧ ✦</div>
+
+<section class="sec" id="cotonou-guide" style="padding-top:0;">
+ <div class="wrap">
+  <div class="sec-h rv" style="text-align: center; justify-content: center; flex-direction: column;">
+    <span class="eyebrow">Cotonou Golden Guide</span>
+    <h2>Où allez-vous briller à minuit ?</h2>
+    <p class="muted" style="max-width: 60ch; margin-inline: auto;">Associez vos plus beaux vêtements aux adresses les plus prisées de la ville pour accueillir 2027.</p>
+  </div>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.8rem;" class="rv rv-delay-1">
+    <!-- Spot 1 -->
+    <div class="box" style="border: 1px solid var(--line); border-radius: 12px; display: flex; flex-direction: column; gap: 1rem; transition: transform .3s; height: 100%;">
+      <span style="font-size: 2.2rem; line-height: 1;">🌟</span>
+      <h3 style="font-family: var(--fd); font-size: 1.35rem; font-weight: 500; margin: 0; color: var(--sec);">La Haie Vive</h3>
+      <p class="muted" style="font-size: .95rem; line-height: 1.6; margin: 0;">L'ambiance feutrée, chic et cosmopolite pour un dîner d'exception entre connaisseurs. Les lumières tamisées exigent des éclats subtils.</p>
+      <div style="border-top: 1px dashed var(--line); padding-top: .8rem; margin-top: auto; font-size: .88rem; font-weight: 700; color: var(--acc);">
+        💡 Le Look Idéal : <a href="#/produit/look" style="text-decoration: underline;">Le Look Minuit Complet</a>
+      </div>
+    </div>
+    
+    <!-- Spot 2 -->
+    <div class="box" style="border: 1px solid var(--line); border-radius: 12px; display: flex; flex-direction: column; gap: 1rem; transition: transform .3s; height: 100%;">
+      <span style="font-size: 2.2rem; line-height: 1;">🌊</span>
+      <h3 style="font-family: var(--fd); font-size: 1.35rem; font-weight: 500; margin: 0; color: var(--sec);">Fidjrossè Beach</h3>
+      <p class="muted" style="font-size: .95rem; line-height: 1.6; margin: 0;">La brise marine, le son des vagues et la ferveur festive. Des feux d'artifice à la danse de minuit, brillez sans retenue sous la lune.</p>
+      <div style="border-top: 1px dashed var(--line); padding-top: .8rem; margin-top: auto; font-size: .88rem; font-weight: 700; color: var(--acc);">
+        💡 Le Look Idéal : <a href="#/produit/robe" style="text-decoration: underline;">Robe Sequins</a> + <a href="#/produit/maquillage-paillettes" style="text-decoration: underline;">Kit Paillettes</a>
+      </div>
+    </div>
+
+    <!-- Spot 3 -->
+    <div class="box" style="border: 1px solid var(--line); border-radius: 12px; display: flex; flex-direction: column; gap: 1rem; transition: transform .3s; height: 100%;">
+      <span style="font-size: 2.2rem; line-height: 1;">🥂</span>
+      <h3 style="font-family: var(--fd); font-size: 1.35rem; font-weight: 500; margin: 0; color: var(--sec);">Prestige Rooftop</h3>
+      <p class="muted" style="font-size: .95rem; line-height: 1.6; margin: 0;">La vue imprenable sur Cotonou illuminée de mille feux d'artifice. Soyez au sommet de la sophistication avec des lignes dorées parfaites.</p>
+      <div style="border-top: 1px dashed var(--line); padding-top: .8rem; margin-top: auto; font-size: .88rem; font-weight: 700; color: var(--acc);">
+        💡 Le Look Idéal : <a href="#/produit/pochette" style="text-decoration: underline;">Pochette Étoile</a> + <a href="#/produit/boucles" style="text-decoration: underline;">Boucles d'oreilles</a>
+      </div>
+    </div>
+  </div>
+ </div>
+</section>
+
+<div class="ornament">✦ ✧ ✦</div>
 
 <section class="sec" style="padding-top:0"><div class="wrap">
- <div class="sec-h rv"><div><span class="eyebrow">La collection</span><h2>Pièce par pièce</h2></div><a class="btn btn-ghost btn-sm" href="#/boutique">Tout voir</a></div>
- <div class="grid rv" data-grid="robe,escarpins,pochette,maquillage-paillettes"></div>
+ <div class="sec-h rv">
+  <div>
+    <span class="eyebrow">Sélection exclusive</span>
+    <h2>Pièce par pièce</h2>
+  </div>
+  <a class="btn btn-ghost btn-sm" href="#/boutique">Voir toute la collection (-15%)</a>
+ </div>
+ <div class="grid" data-grid="robe,escarpins,pochette,maquillage-paillettes"></div>
 </div></section>
+
+<div class="ornament">✦ ✧ ✦</div>
+
+<section class="sec" id="gants-blancs" style="background: #08080C; border-block: 1px solid var(--line); padding: 5rem 0;">
+  <div class="wrap">
+    <div class="sec-h rv" style="text-align: center; justify-content: center; flex-direction: column; margin-bottom: 3.5rem;">
+      <span class="eyebrow">L'Expérience Minuit Doré</span>
+      <h2>Le Service Gants Blancs</h2>
+      <p class="muted" style="max-width: 60ch; margin-inline: auto;">Parce que votre Réveillon mérite l'excellence. Nous avons conçu le service d'accompagnement le plus prestigieux et le plus sécurisant d'Afrique de l'Ouest.</p>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+      <div class="box rv rv-delay-1" style="border: 1px solid var(--line-strong); background: rgba(212, 175, 55, 0.02); text-align: center; padding: 2.2rem 1.5rem; border-radius: 12px; transition: transform 0.3s ease;">
+        <div style="font-size: 2.5rem; margin-bottom: 1.2rem; color: var(--acc);">📦</div>
+        <h3 style="font-family: var(--fd); font-size: 1.3rem; margin-bottom: 0.8rem; color: var(--sec); font-weight:500">Essayage à Domicile</h3>
+        <p class="muted" style="font-size: 0.9rem; line-height: 1.6; margin:0">Le coursier patiente 10 minutes chez vous à Cotonou ou Calavi. Vous essayez votre robe et vos escarpins avant de régler la commande.</p>
+      </div>
+      
+      <div class="box rv rv-delay-2" style="border: 1px solid var(--line-strong); background: rgba(212, 175, 55, 0.02); text-align: center; padding: 2.2rem 1.5rem; border-radius: 12px; transition: transform 0.3s ease;">
+        <div style="font-size: 2.5rem; margin-bottom: 1.2rem; color: var(--acc);">📐</div>
+        <h3 style="font-family: var(--fd); font-size: 1.3rem; margin-bottom: 0.8rem; color: var(--sec); font-weight:500">Zéro Stress Sizing</h3>
+        <p class="muted" style="font-size: 0.9rem; line-height: 1.6; margin:0">Un doute sur la taille ? Notre livreur apporte gratuitement la taille supérieure ou inférieure pour un essayage parfait sans frais.</p>
+      </div>
+      
+      <div class="box rv rv-delay-3" style="border: 1px solid var(--line-strong); background: rgba(212, 175, 55, 0.02); text-align: center; padding: 2.2rem 1.5rem; border-radius: 12px; transition: transform 0.3s ease;">
+        <div style="font-size: 2.5rem; margin-bottom: 1.2rem; color: var(--acc);">🔒</div>
+        <h3 style="font-family: var(--fd); font-size: 1.3rem; margin-bottom: 0.8rem; color: var(--sec); font-weight:500">Paiement après Test</h3>
+        <p class="muted" style="font-size: 0.9rem; line-height: 1.6; margin:0">Aucun risque. Réglez par MTN MoMo, Moov Money, Wave, Orange Money ou espèces seulement une fois pleinement convaincue.</p>
+      </div>
+      
+      <div class="box rv rv-delay-4" style="border: 1px solid var(--line-strong); background: rgba(212, 175, 55, 0.02); text-align: center; padding: 2.2rem 1.5rem; border-radius: 12px; transition: transform 0.3s ease;">
+        <div style="font-size: 2.5rem; margin-bottom: 1.2rem; color: var(--acc);">⚡</div>
+        <h3 style="font-family: var(--fd); font-size: 1.3rem; margin-bottom: 0.8rem; color: var(--sec); font-weight:500">Garantie Livraison</h3>
+        <p class="muted" style="font-size: 0.9rem; line-height: 1.6; margin:0">Commandez avant le 29 décembre à minuit : nous garantissons votre livraison avant le 31 à 18 h, ou votre panier complet est offert.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦ ✧ ✦</div>
 
 <section class="sec clock-sec" id="minuit"><div class="wrap" style="text-align:center">
- <span class="eyebrow">Compte à rebours</span>
- <h2 class="rv">Minuit, 31 décembre 2026</h2>
- <div class="bigclock rv" id="bigclock" aria-live="off"></div>
- <p class="muted rv">Dernière livraison express à Cotonou : le 31 décembre, commande avant 14 h.</p>
- <button class="btn btn-acc rv" data-confetti data-copy="MINUIT10">Faire pleuvoir les paillettes · code MINUIT10</button>
+ <span class="eyebrow rv">Compte à rebours officiel</span>
+ <h2 class="rv rv-delay-1">Le compte à rebours avant <em>2027</em></h2>
+ <p class="muted rv rv-delay-2" style="max-width:50ch;margin-inline:auto">Commandez avant le 29 décembre à minuit pour garantir votre livraison à Cotonou avant le grand soir.</p>
+ <div class="bigclock rv rv-delay-3" id="bigclock" aria-live="off"></div>
+ <p class="muted rv rv-delay-4" style="font-size:.9rem">Livraison express disponible à Akpakpa, Fidjrossè, Haie Vive, Calavi et Porto-Novo.</p>
+ <button class="btn btn-acc rv" style="margin-top:1rem" data-confetti data-copy="MINUIT10">Faire pleuvoir les paillettes · Copier le code MINUIT10 (-10%)</button>
 </div></section>
+
+<div class="ornament">✦ ✧ ✦</div>
 
 <section class="sec"><div class="wrap">
- <div class="sec-h rv"><div><span class="eyebrow">Elles ont brillé</span><h2>4,8/5 · 1 285 avis</h2></div></div>
- <div class="reviews rv">
-  <figure class="review"><span class="stars">★★★★★</span><p>« La robe est encore plus belle en vrai. On m'a demandé l'adresse toute la soirée. »</p><footer>Prisca · Cotonou, Haie Vive</footer></figure>
-  <figure class="review"><span class="stars">★★★★★</span><p>« Commandé le 29, livré le 30, échange de taille le jour même. Service impeccable. »</p><footer>Yasmine · Calavi</footer></figure>
-  <figure class="review"><span class="stars">★★★★☆</span><p>« Escarpins confortables, j'ai dansé jusqu'à 3 h. Je prends une demi-pointure au-dessus. »</p><footer>Laure · Porto-Novo</footer></figure>
+ <div class="sec-h rv">
+  <div>
+    <span class="eyebrow">Avis vérifiés</span>
+    <h2>Elles ont brillé avec Minuit Doré</h2>
+  </div>
+  <span class="stars" style="font-size:1.1rem">★★★★★ <span style="font-weight:700">4,8/5 (1 285 avis)</span></span>
+ </div>
+ <div class="reviews">
+  <figure class="review rv rv-delay-1">
+    <span class="stars">★★★★★</span>
+    <p>« La robe est reçue le lendemain à Haie Vive. Elle attrape chaque lumière, on ne m'a complimentée que pour ça toute la soirée du Réveillon. »</p>
+    <footer>Prisca · Cotonou, Haie Vive</footer>
+  </figure>
+  <figure class="review rv rv-delay-2">
+    <span class="stars">★★★★★</span>
+    <p>« Commandé le 29 décembre, livré le 30 avec l'essayage du livreur. Le service est irréprochable et la qualité est au rendez-vous. »</p>
+    <footer>Yasmine · Calavi</footer>
+  </figure>
+  <figure class="review rv rv-delay-3">
+    <span class="stars">★★★★★</span>
+    <p>« Des escarpins incroyablement confortables. J'ai dansé jusqu'à 4 h du matin sans aucune douleur aux pieds. Merci Minuit Doré ! »</p>
+    <footer>Laure · Porto-Novo</footer>
+  </figure>
  </div>
 </div></section>
+
+<div class="ornament">✦ ✧ ✦</div>
 
 <section class="sec" id="faq"><div class="wrap">
- <div class="sec-h rv"><h2>Questions</h2></div>
+ <div class="sec-h rv">
+  <div>
+    <span class="eyebrow">Tout savoir</span>
+    <h2>Vos questions, nos réponses</h2>
+  </div>
+ </div>
  <div class="faq rv">
-  <details><summary>Serai-je livrée avant le Réveillon ?</summary><p>Oui pour toute commande passée avant le 29 décembre à minuit. Express à Cotonou le 30 et le 31 décembre pour une commande avant 14 h.</p></details>
-  <details><summary>Et si la taille ne va pas ?</summary><p>Essayez à la livraison : le livreur attend 10 minutes. L'échange de taille est gratuit.</p></details>
-  <details><summary>Que se passe-t-il après minuit ?</summary><p>Le 1er janvier, la collection passe à -20 % avec le code BONNEANNEE jusqu'au 7 janvier. Pour voir la page du Nouvel An, ajoutez ?demo=newyear à l'adresse.</p></details>
-  <details><summary>Comment payer ?</summary><p>Mobile Money ou à la livraison. (Site de démonstration : aucun paiement n'est encaissé.)</p></details>
+  <details>
+    <summary>Serai-je livrée avant le Réveillon du 31 décembre 2026 ?</summary>
+    <p>Oui, pour toute commande passée avant le 29 décembre à minuit. Pour les commandes de dernière minute à Cotonou et Calavi, une option express est active les 30 et 31 décembre jusqu'à 14 h.</p>
+  </details>
+  <details>
+    <summary>Et si la taille de ma robe ou de mes escarpins ne va pas ?</summary>
+    <p>Profitez de notre essayage à la livraison : le livreur patiente 10 minutes pendant que vous essayez. En cas de besoin, l'échange de taille est 100% gratuit et immédiat selon les stocks disponibles.</p>
+  </details>
+  <details>
+    <summary>Comment s'effectue le paiement en toute sécurité ?</summary>
+    <p>Vous pouvez régler par Mobile Money (MTN MoMo, Moov Money, Wave, Orange Money) ou choisir le paiement en espèces à la livraison après avoir vérifié vos articles devant le livreur.</p>
+  </details>
+  <details>
+    <summary>Les remises affichées sont-elles réelles ?</summary>
+    <p>Absolument. Nos prix barrés correspondent au prix le plus bas pratiqué au cours des 30 derniers jours, et chaque économie en FCFA est clairement affichée pour votre sérénité.</p>
+  </details>
  </div>
 </div></section>
 
 </div>
+
 <div data-view="shop" hidden>
-<section class="shop-hero"><div class="wrap"><nav class="crumbs" aria-label="Fil d'Ariane"><a href="#/">Accueil</a> / <span aria-current="page">Boutique</span></nav><h1>La collection Réveillon</h1><p class="muted" style="max-width:60ch">Des pièces pensées pour briller une nuit, et se porter toute l'année.</p></div></section>
-<section class="wrap" style="padding-bottom:5rem"><div class="toolbar"><div class="chips" id="chips" role="group" aria-label="Filtrer par catégorie"></div>
-<div style="display:flex;gap:.8rem;align-items:center"><span id="shop-count" class="muted" style="font-size:.9rem"></span><label class="sr" for="sort">Trier</label><select id="sort" class="select"><option value="pop">Les plus populaires</option><option value="disc">Meilleures remises</option><option value="asc">Prix croissant</option><option value="desc">Prix décroissant</option></select></div></div>
-<div class="grid" id="shop-grid"></div></section>
+<section class="shop-hero">
+ <div class="wrap">
+  <nav class="crumbs" aria-label="Fil d'Ariane"><a href="#/">Accueil</a> / <span aria-current="page">Boutique</span></nav>
+  <h1>La collection Réveillon 2027</h1>
+  <p class="muted" style="max-width:60ch">Des pièces d'exception pensées pour briller le soir du 31 décembre et se porter toute l'année avec élégance. Garantie 12 mois sur les accessoires et finitions.</p>
+ </div>
+</section>
+<section class="wrap" style="padding-bottom:5rem">
+ <div class="toolbar">
+  <div class="chips" id="chips" role="group" aria-label="Filtrer par catégorie"></div>
+  <div style="display:flex;gap:.8rem;align-items:center">
+   <span id="shop-count" class="muted" style="font-size:.9rem"></span>
+   <label class="sr" for="sort">Trier</label>
+   <select id="sort" class="select">
+    <option value="pop">Les plus populaires</option>
+    <option value="disc">Meilleures remises</option>
+    <option value="asc">Prix croissant</option>
+    <option value="desc">Prix décroissant</option>
+   </select>
+  </div>
+ </div>
+ <div class="grid" id="shop-grid"></div>
+</section>
 </div>
+
 <div data-view="product" hidden></div>
+
 </main>
+
 <footer class="ftr"><div class="wrap">
-<div class="ftr-grid">
-<div><a class="logo" href="#/"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="none" stroke="var(--acc)" stroke-width="1.4"/><path d="M20 8v12" stroke="var(--acc)" stroke-width="1.6"/><path d="M20 20l-5-4" stroke="var(--sec)" stroke-width="1.6"/><circle cx="20" cy="20" r="1.8" fill="var(--acc)"/></svg><span>MINUIT <span style="color:var(--acc)">DORÉ</span></span></a><p class="muted" style="margin-top:1rem;max-width:34ch">La maison des nuits qui comptent. Paillettes, or et élégance, livrés à Cotonou.</p></div>
-<div><h4>Boutique</h4><ul><li><a href="#/boutique/robes">Robes</a></li><li><a href="#/boutique/accessoires">Accessoires</a></li><li><a href="#/boutique/beaute">Beauté</a></li><li><a href="#look">Le look complet</a></li></ul></div>
-<div><h4>Aide</h4><ul><li><a href="#faq">FAQ</a></li><li><a href="#faq">Livraison</a></li><li><a href="#faq">Retours</a></li><li><a href="https://wa.me/?text=Minuit Doré" target="_blank" rel="noopener">WhatsApp</a></li></ul></div>
-<div><h4>Newsletter</h4><p class="muted" style="font-size:.85rem">Les nouvelles pièces et les invitations aux ventes privées.</p>
-<form class="news" name="newsletter" method="POST" data-netlify="true" data-netlify-form data-ok="Merci ! Votre code arrive par e-mail."><input type="hidden" name="form-name" value="newsletter"><label class="sr" for="nl-email">E-mail</label><input id="nl-email" type="email" name="email" placeholder="votre@email.com" required><button class="btn btn-acc btn-sm">OK</button></form></div>
-</div>
-<div class="ftr-b"><span>© 2026 Minuit Doré · Cotonou. Marque fictive, site de démonstration : aucun paiement réel.</span><span>Prix en FCFA TTC · Mobile Money · Paiement à la livraison</span></div>
+ <div class="ftr-grid">
+  <div>
+   <a class="logo" href="#/">
+     <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="none" stroke="var(--acc)" stroke-width="1.4"/><path d="M20 8v12" stroke="var(--acc)" stroke-width="1.6"/><path d="M20 20l-5-4" stroke="var(--sec)" stroke-width="1.6"/><circle cx="20" cy="20" r="1.8" fill="var(--acc)"/></svg>
+     <span>MINUIT <span style="color:var(--acc)">DORÉ</span></span>
+   </a>
+   <p class="muted" style="margin-top:1.2rem;max-width:34ch;font-size:.9rem">La maison des nuits qui comptent. Paillettes, or et élégance à Cotonou pour un Réveillon inoubliable.</p>
+  </div>
+  <div>
+   <h4>Boutique</h4>
+   <ul>
+    <li><a href="#/boutique/robes">Robes à sequins</a></li>
+    <li><a href="#/boutique/accessoires">Sacs & Pochette</a></li>
+    <li><a href="#/boutique/beaute">Maquillage & Beauté</a></li>
+    <li><a href="#look">Le look complet</a></li>
+   </ul>
+  </div>
+  <div>
+   <h4>Aide & Livraison</h4>
+   <ul>
+    <li><a href="#faq">FAQ & Délais</a></li>
+    <li><a href="#faq">Politique de retour</a></li>
+    <li><a href="#faq">Moyens de paiement</a></li>
+    <li><a href="https://wa.me/?text=Bonjour%20Minuit%20Doré,%20je%20souhaite%20des%20conseils%20pour%20le%20Réveillon." target="_blank" rel="noopener">Contact WhatsApp</a></li>
+   </ul>
+  </div>
+  <div>
+   <h4>Newsletter VIP</h4>
+   <p class="muted" style="font-size:.85rem;margin-bottom:.8rem">Recevez nos invitations exclusives et un code promo de bienvenue.</p>
+   <form class="news" name="newsletter" method="POST" data-netlify="true" data-netlify-form data-ok="MerciVIP! Votre code VIP arrive par e-mail.">
+    <input type="hidden" name="form-name" value="newsletter">
+    <label class="sr" for="nl-email">E-mail</label>
+    <input id="nl-email" type="email" name="email" placeholder="votre@email.com" required>
+    <button class="btn btn-acc btn-sm">S'inscrire</button>
+   </form>
+  </div>
+ </div>
+ <div class="ftr-b">
+  <span>© 2026 Minuit Doré · Cotonou. Marque fictive, site de démonstration : aucun paiement réel encaissé.</span>
+  <span>Prix en FCFA TTC · Mobile Money · Paiement à la livraison</span>
+ </div>
 </div></footer>
+
 <div class="overlay" data-close></div>
-<aside class="drawer" aria-hidden="true" aria-label="Panier" role="dialog"><div class="drawer-h"><h2>Votre panier</h2><button class="x" data-close aria-label="Fermer le panier">×</button></div><div class="drawer-b"></div><div class="drawer-f"></div></aside>
+<aside class="drawer" aria-hidden="true" aria-label="Panier" role="dialog">
+ <div class="drawer-h">
+  <h2>Votre panier</h2>
+  <button class="x" data-close aria-label="Fermer le panier">×</button>
+ </div>
+ <div class="drawer-b"></div>
+ <div class="drawer-f"></div>
+</aside>
 <div class="sticky-buy" aria-label="Achat rapide"></div>
-<a class="wa-float" href="https://wa.me/?text=Minuit Doré%20-%20bonjour%2C%20j%27ai%20une%20question" target="_blank" rel="noopener" aria-label="Nous écrire sur WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-1-1.1-1.3-1.7-.1-.2 0-.4.1-.5l.4-.5.3-.4v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.5.1 1.1.5 2.1 1.2 3 1.2 1.8 2.8 3.2 4.7 4 .5.2 1 .4 1.6.5.6.2 1.2.2 1.8.1.7-.1 1.4-.6 1.8-1.2.2-.4.2-.9.1-1.3z"/></svg></a>
+
+<a class="wa-float" href="https://wa.me/?text=Bonjour%20Minuit%20Doré,%20je%20souhaite%20commander%20une%20tenue%20pour%20le%20Réveillon." target="_blank" rel="noopener" aria-label="Nous écrire sur WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-1-1.1-1.3-1.7-.1-.2 0-.4.1-.5l.4-.5.3-.4v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.5.1 1.1.5 2.1 1.2 3 1.2 1.8 2.8 3.2 4.7 4 .5.2 1 .4 1.6.5.6.2 1.2.2 1.8.1.7-.1 1.4-.6 1.8-1.2.2-.4.2-.9.1-1.3z"/></svg>
+</a>
 <div class="toast" role="status" aria-live="polite"></div>
+
 <script>
 window.SITE={key:'md',brand:'Minuit Doré',title:document.title,lowStock:5,freeShip:50000,shipFee:2000,openCartOnAdd:true,
-event:{start:'2026-09-01T00:00:00+01:00',end:'2026-12-31T23:59:59+01:00',labels:{before:'Bientôt',live:'2027 commence dans',after:'Bonne année 2027'}},
+event:{start:'2026-09-01T00:00:00+01:00',end:'2026-12-31T23:59:59+01:00',labels:{before:'Bientôt le Réveillon',live:'2027 commence dans',after:'Bonne année 2027'}},
 demoTime:{before:'2026-12-20T12:00:00+01:00',live:'2026-12-31T23:58:40+01:00',after:'2027-01-01T00:30:00+01:00',newyear:'2027-01-01T00:30:00+01:00'},
 codes:{MINUIT10:10,BONNEANNEE:20},
 delivery:'Commandez avant le <b>29 décembre</b> : livrée à temps pour le Réveillon. Cotonou en 24 h.',
-deliveryLong:'Cotonou, Calavi : 24 h (2 000 FCFA, offerte dès 50 000 FCFA). Express le 30 et le 31 décembre avant 14 h. Autres villes : 72 h. Essayage à la livraison, échange de taille gratuit.',
-returns:'Échange de taille gratuit',
-ctaCard:'Je la veux',ctaPdp:'Je la veux pour le 31',ctaSticky:'Je la veux',ctaCheckout:'Valider ma commande',
-crossTitle:'Complétez la silhouette',emptyCart:'Votre look du Réveillon commence ici.',
-priceNote:'Livraison garantie avant le 31 décembre pour toute commande passée avant le 29 décembre à minuit.',
+deliveryLong:'Cotonou, Calavi : livraison en 24 h (2 000 FCFA, offerte dès 50 000 FCFA). Express le 30 et le 31 décembre avant 14 h. Autres villes : 72 h. Essayage à la livraison et échange de taille gratuit.',
+returns:'Essayage à la livraison et échange de taille gratuit',
+ctaCard:'Ajouter au panier',ctaPdp:'Je la veux pour le 31',ctaSticky:'Commander',ctaCheckout:'Valider ma commande',
+crossTitle:'Complétez la silhouette',emptyCart:'Votre panier attend ses plus belles étincelles.',
+priceNote:'Livraison garantie avant le 31 décembre 2026 pour toute commande passée avant le 29 décembre à minuit.',
 cats:[['robes','Robes'],['accessoires','Accessoires'],['beaute','Beauté']],
 products:[
 {id:'robe',name:'Robe Sequins Minuit',cat:'robes',catLabel:'Robe de soirée',price:39900,img:'img/robe.webp',rating:4.8,reviews:264,stock:6,badge:'Pièce phare',options:{label:'Taille',values:['XS','S','M','L','XL','XXL'],def:2},
- short:'Sequins or champagne cousus main, coupe midi fendue, dos plongeant. Elle attrape chaque lumière.',details:['Sequins sur tulle stretch','Doublure douce, ne gratte pas','Fente côté gauche','Taille normalement'],cross:['pochette','boucles','escarpins']},
+ short:'Sequins or champagne cousus main, coupe midi fendue, dos plongeant. Elle attrape chaque lumière.',details:['Sequins sur tulle stretch ultra-confort','Doublure douce, ne gratte pas','Fente côté gauche élégante','Taille normalement'],cross:['pochette','boucles','escarpins']},
+{id:'robe-lurex',name:'Robe Étoilée Lurex',cat:'robes',catLabel:'Robe de soirée',price:34900,img:'img/robe.webp',rating:4.7,reviews:118,stock:4,badge:'Nouveau',options:{label:'Taille',values:['XS','S','M','L','XL'],def:2},
+ short:'Coupe asymétrique drapée en lurex or rose ultra-lumineux. Légère et fluide pour briller tout le Réveillon.',details:['Tissu drapé stretch or rose scintillante','Bretelle asymétrique unique','Confort absolu de mouvement','Lavage à sec recommandé'],cross:['pochette','boucles','escarpins']},
+{id:'tailleur-soie',name:'Tailleur Impératrice Or',cat:'robes',catLabel:'Tailleur',price:49900,img:'img/hero.webp',rating:4.9,reviews:83,stock:3,badge:'Édition Limitée',options:{label:'Taille',values:['S','M','L','XL'],def:1},
+ short:'Blazer croisé et pantalon fluide en brocart de soie orné de motifs baroques dorés. La sophistication à l\'état pur.',details:['Brocart de soie et fil d\'or','Blazer ceinturé ajustable','Pantalon taille haute coupe droite','Boutons dorés gravés'],cross:['pochette','escarpins']},
 {id:'pochette',name:'Pochette Étoile dorée',cat:'accessoires',catLabel:'Pochette',price:14900,img:'img/pochette.webp',rating:4.7,reviews:188,stock:12,
  short:'Métal doré brossé, chaîne amovible. Contient un smartphone, un rouge à lèvres et vos clés.',cross:['robe','boucles','escarpins']},
 {id:'boucles',name:'Boucles d\'oreilles Minuit',cat:'accessoires',catLabel:'Bijoux',price:9900,img:'img/boucles.webp',rating:4.8,reviews:301,stock:20,
  short:'Pendantes, laiton doré à l\'or fin, strass. Légères : on les oublie jusqu\'au petit matin.',cross:['robe','pochette','maquillage-paillettes']},
 {id:'escarpins',name:'Escarpins Champagne',cat:'accessoires',catLabel:'Chaussures',price:27900,img:'img/escarpins.webp',rating:4.6,reviews:142,stock:5,options:{label:'Pointure',values:['36','37','38','39','40','41'],def:2},
- short:'Talon 8 cm, bride cheville, semelle rembourrée. Pour danser jusqu\'à 4 h du matin.',cross:['robe','pochette','boucles']},
+ short:'Talon 8 cm, bride cheville, semelle rembourrée. Pour danser jusqu\'à 4 h du matin sans douleur.',cross:['robe','pochette','boucles']},
 {id:'maquillage-paillettes',name:'Kit maquillage Paillettes',cat:'beaute',catLabel:'Beauté',price:12900,img:'img/maquillage-paillettes.webp',rating:4.7,reviews:215,stock:18,
  short:'Palette 9 fards dorés, gel pailleté et fixateur. Tons pensés pour les peaux noires et métissées.',cross:['boucles','couronne-2027','pochette']},
 {id:'couronne-2027',name:'Serre-tête 2027 doré',cat:'accessoires',catLabel:'Accessoire',price:6900,img:'img/couronne-2027.webp',rating:4.5,reviews:98,stock:25,
  short:'Le serre-tête « 2027 » pailleté pour les photos de minuit. Réglable, léger.',cross:['maquillage-paillettes','boucles','pochette']},
-{id:'look',name:'Le Look Minuit complet',cat:'robes',catLabel:'Look complet',price:78700,was:92600,combo:['robe','pochette','boucles','escarpins'],rating:4.9,reviews:77,stock:4,badge:'-15 %',options:{label:'Taille de robe',values:['XS','S','M','L','XL','XXL'],def:2},
+{id:'look',name:'Le Look Minuit complet',cat:'robes',catLabel:'Look complet',price:78700,was:92600,combo:['robe','pochette','boucles','escarpins'],rating:4.9,reviews:77,stock:4,badge:'-15%',options:{label:'Taille de robe',values:['XS','S','M','L','XL','XXL'],def:2},
  short:'La robe Sequins Minuit, la pochette Étoile, les boucles Minuit et les escarpins Champagne. Tout coordonné, en un clic.',cross:['maquillage-paillettes','couronne-2027']}
 ],
 init(){
  const cv=document.createElement('canvas');cv.className='confetti';cv.setAttribute('aria-hidden','true');document.body.appendChild(cv);const cx=cv.getContext('2d');let parts=[],run=false;
  const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
  window.confetti=(x,y)=>{if(rm)return;cv.width=innerWidth;cv.height=innerHeight;const cols=['#D4AF37','#F7E7CE','#FFF','#B8912A'];
-  for(let i=0;i<120;i++){const a=Math.random()*Math.PI*2,v=4+Math.random()*8;parts.push({x,y,vx:Math.cos(a)*v,vy:Math.sin(a)*v-6,r:2+Math.random()*4,c:cols[i%4],l:90+Math.random()*40,s:Math.random()*6})}
+  for(let i=0;i<130;i++){const a=Math.random()*Math.PI*2,v=4+Math.random()*9;parts.push({x,y,vx:Math.cos(a)*v,vy:Math.sin(a)*v-6,r:2+Math.random()*5,c:cols[i%4],l:90+Math.random()*40,s:Math.random()*6})}
   if(!run){run=true;const step=()=>{cx.clearRect(0,0,cv.width,cv.height);parts=parts.filter(p=>p.l-->0);parts.forEach(p=>{p.vy+=.25;p.vx*=.98;p.x+=p.vx;p.y+=p.vy;cx.globalAlpha=Math.min(1,p.l/40);cx.fillStyle=p.c;cx.save();cx.translate(p.x,p.y);cx.rotate(p.l/10+p.s);cx.fillRect(-p.r,-p.r/2,p.r*2,p.r);cx.restore()});if(parts.length)requestAnimationFrame(step);else{run=false;cx.clearRect(0,0,cv.width,cv.height)}};step()}};
  let lastXY=[innerWidth/2,innerHeight/2];document.addEventListener('click',e=>{lastXY=[e.clientX,e.clientY];if(e.target.closest('[data-confetti]'))confetti(e.clientX,e.clientY)},true);
  window.SITE.onAdd=()=>confetti(lastXY[0],lastXY[1]);
  const ny=Q4.NOW()>=Date.parse('2027-01-01T00:00:00+01:00');
- if(ny){document.body.classList.add('newyear');const h=document.getElementById('h-title');if(h)h.innerHTML='Bonne année <em>2027</em>.';const l=document.getElementById('h-lead');if(l)l.textContent='Merci d\'avoir brillé avec nous. Pour les soirées de janvier, profitez de -20 % sur toute la collection avec le code BONNEANNEE, jusqu\'au 7 janvier.';const c=document.getElementById('h-cta');if(c){c.textContent='Profiter de -20 %';c.setAttribute('data-copy','BONNEANNEE');c.removeAttribute('href')}}
+ if(ny){document.body.classList.add('newyear');const h=document.getElementById('h-title');if(h)h.innerHTML='Bonne année <em>2027</em>.';const l=document.getElementById('h-lead');if(l)l.textContent='Merci d\'avoir brillé avec Minuit Doré. Pour les soirées de janvier, profitez de -20% sur toute la collection avec le code BONNEANNEE, valable jusqu\'au 7 janvier.';const c=document.getElementById('h-cta');if(c){c.textContent='Profiter de -20%';c.setAttribute('data-copy','BONNEANNEE');c.removeAttribute('href')}}
  const big=document.getElementById('bigclock');if(big){const T=Date.parse('2027-01-01T00:00:00+01:00'),t0=performance.now();let fired=false;
   const tick=()=>{let ms=T-(Q4.NOW()+(Q4.DEMO?performance.now()-t0:0));if(ms<=0){big.innerHTML='<span class="ny">2027</span>';if(!fired){fired=true;const r=big.getBoundingClientRect();confetti(r.left+r.width/2,r.top+r.height/2)}return}
    const d=Math.floor(ms/864e5),h=Math.floor(ms/36e5)%24,m=Math.floor(ms/6e4)%60,s=Math.floor(ms/1e3)%60,p=n=>String(n).padStart(2,'0');
    big.innerHTML=`<span><b>${d}</b><i>jours</i></span><span><b>${p(h)}</b><i>heures</i></span><span><b>${p(m)}</b><i>minutes</i></span><span><b>${p(s)}</b><i>secondes</i></span>`};tick();setInterval(tick,1000)}
 }};
-
 </script>
 <script>
 (()=>{
@@ -436,7 +811,6 @@ const DEMO=qs.get('demo');
 const NOW=()=>{ if(DEMO&&S.demoTime&&S.demoTime[DEMO]) return Date.parse(S.demoTime[DEMO]); return Date.now(); };
 window.Q4={fcfa,pct,esc,P,$,$$,NOW,DEMO,toast,addToCart,openCart,modal,stars,card,renderGrid,go:(h)=>{location.hash=h}};
 
-/* icons */
 const IC={
  truck:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>',
  shield:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>',
@@ -451,12 +825,120 @@ window.Q4.IC=IC;
 
 function stars(r,n){const f=Math.round(r);return `<span class="stars" aria-label="Note ${String(r).replace('.',',')} sur 5">${'★'.repeat(f)}${'☆'.repeat(5-f)}${n?`<span>(${n})</span>`:''}</span>`}
 
-/* ===== card ===== */
-function card(p){
+/* Beautiful "Souffle de paillettes" text writing & stardust particle helper */
+function animateGlitterText(el, text) {
+ if (!el) return;
+ const isReduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const txt = (text || el.textContent || '').trim();
+ 
+ if (isReduced) {
+  el.textContent = txt;
+  return;
+ }
+ 
+ if (el.dataset.animating === 'true') return;
+ el.dataset.animating = 'true';
+ 
+ el.innerHTML = '';
+ const words = txt.split(' ');
+ let charCounter = 0;
+ 
+ words.forEach((word, wIdx) => {
+  const wordSpan = document.createElement('span');
+  wordSpan.style.whiteSpace = 'nowrap';
+  wordSpan.style.display = 'inline-block';
+  
+  for (let i = 0; i < word.length; i++) {
+   const char = word[i];
+   const charSpan = document.createElement('span');
+   charSpan.className = 'glitter-char';
+   charSpan.textContent = char;
+   
+   const delay = charCounter * 0.035;
+   charSpan.style.animation = `charAppear 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards`;
+   charSpan.style.animationDelay = `${delay}s`;
+   
+   // Blow stardust stars from letters at random intervals
+   if (Math.random() > 0.65) {
+    setTimeout(() => {
+     spawnStardust(charSpan);
+    }, (delay * 1000) + 130);
+   }
+   
+   wordSpan.appendChild(charSpan);
+   charCounter++;
+  }
+  wordSpan.setAttribute('aria-hidden', 'true');
+  el.appendChild(wordSpan);
+  
+  if (wIdx < words.length - 1) {
+   el.appendChild(document.createTextNode(' '));
+  }
+ });
+ 
+ // Screen-reader / SEO accessible plain text fallback
+ const srFallback = document.createElement('span');
+ srFallback.className = 'sr';
+ srFallback.textContent = txt;
+ el.appendChild(srFallback);
+ 
+ setTimeout(() => {
+  el.removeAttribute('data-animating');
+ }, (charCounter * 35) + 800);
+}
+
+function spawnStardust(target) {
+ if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+ const rect = target.getBoundingClientRect();
+ const x = rect.left + rect.width / 2 + window.scrollX;
+ const y = rect.top + rect.height / 2 + window.scrollY;
+ 
+ const container = document.body;
+ const pCount = 2 + Math.floor(Math.random() * 3);
+ const symbols = ['✦', '✧', '★', '⋆'];
+ 
+ for (let i = 0; i < pCount; i++) {
+  const p = document.createElement('span');
+  p.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+  p.style.position = 'absolute';
+  p.style.left = `${x}px`;
+  p.style.top = `${y}px`;
+  p.style.color = 'var(--acc)';
+  p.style.fontSize = `${0.45 + Math.random() * 0.5}rem`;
+  p.style.pointerEvents = 'none';
+  p.style.zIndex = '9999';
+  p.style.opacity = '0';
+  p.style.transform = 'translate3d(0,0,0) scale(0)';
+  p.style.transition = 'all 0.85s cubic-bezier(0.16, 1, 0.3, 1)';
+  
+  container.appendChild(p);
+  
+  // Force layout reflow
+  void p.offsetWidth;
+  
+  const angle = Math.random() * Math.PI * 2;
+  const velocity = 10 + Math.random() * 25;
+  const tx = Math.cos(angle) * velocity;
+  const ty = -20 - Math.random() * 35;
+  const rot = -180 + Math.random() * 360;
+  
+  p.style.transform = `translate3d(${tx}px, ${ty}px, 0) scale(1.1) rotate(${rot}deg)`;
+  p.style.opacity = '1';
+  
+  setTimeout(() => {
+   p.style.opacity = '0';
+   p.style.transform = `translate3d(${tx * 1.3}px, ${ty * 1.3}px, 0) scale(0) rotate(${rot * 1.5}deg)`;
+   setTimeout(() => p.remove(), 850);
+  }, 450);
+ }
+}
+
+function card(p, index=0){
  const d=p.was?pct(p.was,p.price):0;
- const badge=p.badge||(d?`-${d} %`:'');
+ const badge=p.badge||(d?`-${d}%`:'');
  const img=p.combo?p.combo.map(i=>P[i].img)[0]:p.img;
- return `<article class="card ${S.cardClass||''}" data-id="${p.id}">
+ const delayClass=`rv-delay-${(index % 4) + 1}`;
+ return `<article class="card rv ${delayClass}" data-id="${p.id}">
   <div class="card-media">${badge?`<span class="badge">${esc(badge)}</span>`:''}${p.tag?`<span class="badge alt">${esc(p.tag)}</span>`:''}
    ${p.combo?`<div style="display:grid;grid-template-columns:1fr 1fr;height:100%;gap:2px">${p.combo.map(i=>`<img src="${P[i].img}" alt="" loading="lazy" width="300" height="300" style="height:100%;object-fit:cover">`).join('')}</div>`:`<img src="${img}" alt="${esc(p.alt||p.name)}" loading="lazy" width="600" height="600">`}
   </div>
@@ -470,9 +952,11 @@ function card(p){
    <button class="btn btn-acc btn-sm add" data-add="${p.id}">${esc(S.ctaCard||'Ajouter au panier')}</button>
   </div></article>`;
 }
-function renderGrid(el,list){el.innerHTML=list.map(card).join('')||'<p class="empty">Aucun produit ne correspond. <button class="btn btn-ghost btn-sm" data-reset>Voir tout</button></p>'}
+function renderGrid(el,list){
+ el.innerHTML=list.map((p,i)=>card(p,i)).join('')||'<p class="empty">Aucun produit ne correspond à votre recherche. <button class="btn btn-ghost btn-sm" data-reset>Voir tout</button></p>';
+ reveal();
+}
 
-/* ===== shop ===== */
 let shopCat='all',shopSort='pop';
 function renderShop(cat){
  if(cat) shopCat=cat;
@@ -491,7 +975,6 @@ document.addEventListener('click',e=>{
 });
 document.addEventListener('change',e=>{if(e.target.id==='sort'){shopSort=e.target.value;renderShop();}});
 
-/* ===== product page ===== */
 let cur=null,curQty=1,curOpt=null;
 function renderProduct(id){
  const p=P[id]; const v=$('[data-view="product"]');
@@ -506,14 +989,20 @@ function renderProduct(id){
   <div class="pdp-media ${p.combo?'combo':''}">${p.combo?p.combo.map(i=>`<img src="${P[i].img}" alt="${esc(P[i].name)}" width="600" height="600">`).join(''):`<img src="${p.img}" alt="${esc(p.alt||p.name)}" width="900" height="900" fetchpriority="high">`}</div>
   <div>
    <span class="eyebrow">${esc(p.catLabel||p.cat)}</span>
-   <h1 tabindex="-1">${esc(p.name)}</h1>
+   <h1 tabindex="-1" class="glitter-trigger">${esc(p.name)}</h1>
    ${p.rating?`<p>${stars(p.rating,p.reviews)} <span class="muted" style="font-size:.85rem">${p.reviews} avis vérifiés</span></p>`:''}
-   <div class="price"><strong>${fcfa(p.price)}${p.unit?`<small style="font-size:.5em;font-weight:600"> ${p.unit}</small>`:''}</strong>${p.was?`<s>${fcfa(p.was)}</s> <span class="save">-${d} % · Vous économisez ${fcfa(p.was-p.price)}</span>`:''}</div>
-   ${S.priceNote?`<p class="muted" style="font-size:.82rem;margin-top:.4rem">${S.priceNote}</p>`:''}
-   <p style="margin-top:1rem">${p.short}</p>
+   <div class="price"><strong>${fcfa(p.price)}${p.unit?`<small style="font-size:.5em;font-weight:600"> ${p.unit}</small>`:''}</strong>${p.was?`<s>${fcfa(p.was)}</s> <span class="save">-${d}% · Vous économisez ${fcfa(p.was-p.price)}</span>`:''}</div>
+   ${S.priceNote?`<p class="muted" style="font-size:.85rem;margin-top:.4rem">${S.priceNote}</p>`:''}
+   
+   <div style="display: flex; align-items: center; gap: .5rem; margin: .8rem 0; font-size: .88rem; color: #E9C85B; font-weight: 600;">
+     <span style="display: inline-block; width: 8px; height: 8px; background: #E9C85B; border-radius: 50%; animation: pulseGlow 1.5s infinite;"></span>
+     <span>12 clientes à Cotonou consultent ce produit en ce moment</span>
+   </div>
+
+   <p style="margin-top:1.1rem;line-height:1.6">${p.short}</p>
    ${p.options?`<span class="opt-label">${esc(p.options.label)} : <span id="opt-val">${esc(curOpt)}</span></span><div class="chips" id="opts">${p.options.values.map(o=>`<button class="chip" aria-pressed="${o===curOpt}" data-opt="${esc(o)}">${esc(o)}</button>`).join('')}</div>`:''}
    ${S.pdpExtra?S.pdpExtra(p):''}
-   ${p.stock?`<div style="margin-top:1.2rem"><span class="stock">${p.stock<=S.lowStock?`Plus que ${p.stock} en stock : commandez vite`:`En stock · expédié sous 24 h`}</span></div>`:''}
+   ${p.stock?`<div style="margin-top:1.2rem"><span class="stock">${p.stock<=S.lowStock?`Plus que ${p.stock} en stock : commandez vite`:`En stock · expédié sous 24 h à Cotonou`}</span></div>`:''}
    <div class="buy-row">
     ${p.noQty?'':`<div class="qty" role="group" aria-label="Quantité"><button data-q="-1" aria-label="Moins">−</button><output id="qv">1</output><button data-q="1" aria-label="Plus">+</button></div>`}
     <button class="btn btn-acc" data-add-cur>${esc(S.ctaPdp||'Ajouter au panier')} · <span id="pdp-total">${fcfa(p.price)}</span></button>
@@ -521,19 +1010,22 @@ function renderProduct(id){
    <a class="btn btn-wa btn-block" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(`Bonjour ${S.brand}, je souhaite commander : ${p.name} (${fcfa(p.price)}).`)}">${IC.wa.replace('<svg','<svg width="20" height="20"')} Commander sur WhatsApp</a>
    <ul class="info-list">
     <li>${IC.truck}<span>${S.delivery}</span></li>
-    <li>${IC.phone}<span>Paiement Mobile Money (MTN, Moov, Wave, Orange) ou à la livraison</span></li>
-    <li>${IC.back}<span>${S.returns||'Échange ou remboursement sous 7 jours'}</span></li>
+    <li>${IC.phone}<span>Paiement Mobile Money (MTN MoMo, Moov, Wave, Orange) ou paiement à la livraison</span></li>
+    <li>${IC.back}<span>${S.returns||'Essayage à la livraison et échange de taille gratuit'}</span></li>
    </ul>
-   <details open><summary>Description</summary><p style="margin-top:.8rem">${p.desc||p.short}</p></details>
-   ${p.details?`<details><summary>Détails</summary><ul style="margin-top:.8rem;padding-left:1.1rem">${p.details.map(x=>`<li>${x}</li>`).join('')}</ul></details>`:''}
-   <details><summary>Livraison & retours</summary><p style="margin-top:.8rem">${S.deliveryLong||S.delivery}</p></details>
+   <details open><summary>Description détaillée</summary><p style="margin-top:.9rem;line-height:1.6">${p.desc||p.short}</p></details>
+   ${p.details?`<details><summary>Détails & Finitions</summary><ul style="margin-top:.9rem;padding-left:1.2rem;display:grid;gap:.4rem">${p.details.map(x=>`<li>${x}</li>`).join('')}</ul></details>`:''}
+   <details><summary>Livraison à Cotonou & retours</summary><p style="margin-top:.9rem;line-height:1.6">${S.deliveryLong||S.delivery}</p></details>
   </div>
  </div>
  ${p.reviewsList?`<section class="sec" style="padding-bottom:0"><h2 style="font-size:1.8rem">Ils l'ont adopté</h2><div class="reviews">${p.reviewsList.map(r=>`<figure class="review" style="margin:0">${stars(r[2])}<p>« ${r[1]} »</p><footer>${r[0]}</footer></figure>`).join('')}</div></section>`:''}
- <section class="sec"><div class="sec-h"><h2>${esc(S.crossTitle||'Complétez votre commande')}</h2></div><div class="grid" id="cross"></div></section>
+ <section class="sec"><div class="sec-h"><h2>Complétez votre silhouette</h2></div><div class="grid" id="cross"></div></section>
  </div>`;
  renderGrid($('#cross',v),cross.map(i=>P[i]));
  const sb=$('.sticky-buy'); sb.innerHTML=`<div class="price"><strong>${fcfa(p.price)}</strong>${p.was?`<s>${fcfa(p.was)}</s>`:''}</div><button class="btn btn-acc" data-add-cur>${esc(S.ctaSticky||'Ajouter')}</button>`;
+ 
+ const t = v.querySelector('.glitter-trigger');
+ if (t) animateGlitterText(t);
 }
 function updTotal(){const t=$('#pdp-total');if(t&&cur)t.textContent=fcfa(cur.price*curQty);const q=$('#qv');if(q)q.textContent=curQty}
 document.addEventListener('click',e=>{
@@ -543,7 +1035,6 @@ document.addEventListener('click',e=>{
  const a=e.target.closest('[data-add]');if(a){e.preventDefault();const p=P[a.dataset.add];addToCart(p.id,1,p.options?p.options.values[p.options.def||0]:null)}
 });
 
-/* ===== cart ===== */
 const KEY='q4cart-'+S.key;
 let cart=[];try{cart=JSON.parse(localStorage.getItem(KEY))||[]}catch(e){}
 let code=null;
@@ -559,25 +1050,29 @@ function sub(){return cart.reduce((s,l)=>s+P[l.id].price*l.qty,0)}
 function renderCart(){
  const n=cart.reduce((s,l)=>s+l.qty,0); $$('.cart-count').forEach(c=>c.textContent=n);
  const b=$('.drawer-b'),f=$('.drawer-f');
- if(!cart.length){b.innerHTML=`<div class="empty">${IC.bag.replace('<svg','<svg width="48" height="48" style="margin:0 auto 1rem;opacity:.5"')}<p><b>Votre panier est vide.</b></p><p>${S.emptyCart||'Découvrez nos offres du moment.'}</p><a class="btn btn-acc" href="#/boutique" data-close>Voir la boutique</a></div>`;f.hidden=true;return}
+ if(!cart.length){b.innerHTML=`<div class="empty">${IC.bag.replace('<svg','<svg width="48" height="48" style="margin:0 auto 1rem;opacity:.5"')}<p><b>Votre panier est vide.</b></p><p>${S.emptyCart||'Découvrez nos offres du moment.'}</p><a class="btn btn-acc" href="#/boutique" data-close>Explorer la boutique</a></div>`;f.hidden=true;return}
  f.hidden=false;
  const s=sub(),free=S.freeShip,left=Math.max(0,free-s),ship=left?S.shipFee:0,disc=code?Math.round(s*code.pct/100):0;
- b.innerHTML=(!free?`<div class="ship"><span>${S.noShipText||'Aucun frais de livraison'}</span></div>`:`<div class="ship">${left?`<span>Plus que <b>${fcfa(left)}</b> pour la livraison offerte</span>`:`<span>Livraison offerte débloquée</span>`}<div class="bar"><i style="width:${Math.min(100,s/free*100)}%"></i></div></div>`)+
- cart.map((l,i)=>{const p=P[l.id];return `<div class="line"><img src="${p.img||P[p.combo[0]].img}" alt="" width="64" height="64"><div><h4>${esc(p.name)}</h4>${l.opt?`<div class="muted" style="font-size:.8rem">${esc(l.opt)}</div>`:''}<div class="qty" style="margin-top:.35rem"><button data-cq="${i}" data-d="-1" aria-label="Moins">−</button><output>${l.qty}</output><button data-cq="${i}" data-d="1" aria-label="Plus">+</button></div></div><div style="text-align:right"><b class="tnum">${fcfa(p.price*l.qty)}</b><br><button class="rm" data-rm="${i}">Retirer</button></div></div>`}).join('');
- f.innerHTML=`<div class="code-row"><input id="code" placeholder="Code promo" aria-label="Code promo" value="${code?code.c:''}"><button class="btn btn-ghost btn-sm" data-code>Appliquer</button></div>
+ b.innerHTML=(!free?`<div class="ship"><span>${S.noShipText||'Livraison standard à Cotonou'}</span></div>`:`<div class="ship">${left?`<span>Plus que <b>${fcfa(left)}</b> pour débloquer la livraison offerte à Cotonou</span>`:`<span>Livraison offerte débloquée !</span>`}<div class="bar"><i style="width:${Math.min(100,s/free*100)}%"></i></div></div>`)+
+ cart.map((l,i)=>{const p=P[l.id];return `<div class="line"><img src="${p.img||P[p.combo[0]].img}" alt="" width="72" height="72"><div><h4>${esc(p.name)}</h4>${l.opt?`<div class="muted" style="font-size:.82rem">${esc(l.opt)}</div>`:''}<div class="qty" style="margin-top:.4rem"><button data-cq="${i}" data-d="-1" aria-label="Moins">−</button><output>${l.qty}</output><button data-cq="${i}" data-d="1" aria-label="Plus">+</button></div></div><div style="text-align:right"><b class="tnum">${fcfa(p.price*l.qty)}</b><br><button class="rm" data-rm="${i}">Retirer</button></div></div>`}).join('');
+ f.innerHTML=`<div class="code-row"><input id="code" placeholder="Code promo (ex: MINUIT10)" aria-label="Code promo" value="${code?code.c:''}"><button class="btn btn-ghost btn-sm" data-code>Appliquer</button></div>
+ ${!code?`<div style="font-size: .8rem; margin-top: .1rem; display: flex; align-items: center; gap: .4rem; padding-bottom: .4rem;" class="muted">
+   <span>Code recommandé :</span>
+   <button style="background: rgba(212,175,55,.1); border: 1px dashed var(--acc); color: var(--acc); padding: .1rem .4rem; border-radius: 4px; font-weight: 700; font-size: .75rem; cursor: pointer;" data-copy="MINUIT10">MINUIT10 (-10%)</button>
+ </div>`:''}
  <div class="tot"><span>Sous-total</span><span class="tnum">${fcfa(s)}</span></div>
- ${disc?`<div class="tot" style="color:var(--acc-text,var(--acc))"><span>Code ${code.c} (-${code.pct} %)</span><span class="tnum">−${fcfa(disc)}</span></div>`:''}
- <div class="tot"><span>${free?'Livraison':'Accès'}</span><span class="tnum">${ship?fcfa(ship):(free?'Offerte':'Immédiat')}</span></div>
- <div class="tot big"><span>Total</span><span class="tnum">${fcfa(s-disc+ship)}</span></div>
+ ${disc?`<div class="tot" style="color:var(--acc)"><span>Code ${code.c} (-${code.pct}%)</span><span class="tnum">−${fcfa(disc)}</span></div>`:''}
+ <div class="tot"><span>Livraison Cotonou</span><span class="tnum">${ship?fcfa(ship):(free?'Offerte':'Immédiat')}</span></div>
+ <div class="tot big"><span>Total de la commande</span><span class="tnum">${fcfa(s-disc+ship)}</span></div>
  <button class="btn btn-acc btn-block" data-checkout>${esc(S.ctaCheckout||'Valider ma commande')}</button>
- <div class="pay"><span>MTN MoMo</span><span>Moov Money</span><span>Wave</span><span>Orange Money</span><span>À la livraison</span></div>`;
+ <div class="pay"><span>MTN MoMo</span><span>Moov Money</span><span>Wave</span><span>Orange Money</span><span>Paiement à la livraison</span></div>`;
 }
 document.addEventListener('click',e=>{
  const q=e.target.closest('[data-cq]');if(q){const l=cart[+q.dataset.cq];l.qty+= +q.dataset.d;if(l.qty<1)cart.splice(+q.dataset.cq,1);save();renderCart()}
  const r=e.target.closest('[data-rm]');if(r){cart.splice(+r.dataset.rm,1);save();renderCart()}
- if(e.target.closest('[data-code]')){const v=($('#code').value||'').trim().toUpperCase();const p=S.codes&&S.codes[v];if(p){code={c:v,pct:p};toast(`Code ${v} appliqué : -${p} %`)}else{code=null;toast('Code invalide ou expiré')}renderCart()}
+ if(e.target.closest('[data-code]')){const v=($('#code').value||'').trim().toUpperCase();const p=S.codes&&S.codes[v];if(p){code={c:v,pct:p};toast(`Code ${v} appliqué : -${p}%`)}else{code=null;toast('Code invalide ou expiré')}renderCart()}
  if(e.target.closest('[data-checkout]')){const lines=cart.map(l=>`${l.qty} × ${P[l.id].name}${l.opt?' ('+l.opt+')':''}`).join(', ');
-  modal(`<h2 style="font-size:1.6rem">Plus qu'une étape</h2><p>Ceci est un <b>site de démonstration</b> : aucun paiement n'est encaissé.</p><p class="muted" style="font-size:.9rem">En production, ce bouton ouvrirait le paiement Mobile Money ou le paiement à la livraison.</p><a class="btn btn-wa btn-block" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(`Bonjour ${S.brand}, je souhaite commander : ${lines}. Total : ${fcfa(sub())}.`)}">Envoyer ma commande sur WhatsApp</a>`)}
+  modal(`<h2 style="font-size:1.6rem">Plus qu'une étape</h2><p>Ceci est un <b>site de démonstration</b> (marque fictive) : aucun paiement réel n'est encaissé.</p><p class="muted" style="font-size:.9rem">En production, ce bouton ouvrirait le paiement Mobile Money ou le paiement à la livraison après vérification devant le livreur.</p><a class="btn btn-wa btn-block" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(`Bonjour ${S.brand}, je souhaite commander : ${lines}. Total : ${fcfa(sub())}.`)}">Envoyer ma commande sur WhatsApp</a>`)}
  if(e.target.closest('[data-open-cart]'))openCart();
  if(e.target.closest('[data-close]')||e.target.classList.contains('overlay'))closeCart();
  const cp=e.target.closest('[data-copy]');if(cp){const t=cp.dataset.copy;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast(`Code ${t} copié`),()=>toast(`Votre code : ${t}`))}
@@ -586,10 +1081,9 @@ function openCart(){$('.drawer').classList.add('open');$('.overlay').classList.a
 function closeCart(){$('.drawer').classList.remove('open');$('.overlay').classList.remove('open');$('.drawer').setAttribute('aria-hidden','true')}
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeCart();const m=$('.modal');m&&m.remove()}});
 
-function modal(html){const m=document.createElement('div');m.className='modal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');m.innerHTML=`<div class="modal-bg"></div><div class="modal-card"><button class="x" style="position:absolute;top:.5rem;right:.5rem" aria-label="Fermer">×</button>${html}</div>`;document.body.appendChild(m);m.addEventListener('click',e=>{if(e.target.classList.contains('modal-bg')||e.target.closest('.x'))m.remove()});$('.x',m).focus();return m}
-let tt;function toast(t){const el=$('.toast');el.textContent=t;el.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>el.classList.remove('show'),2600)}
+function modal(html){const m=document.createElement('div');m.className='modal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');m.innerHTML=`<div class="modal-bg"></div><div class="modal-card"><button class="x" style="position:absolute;top:.6rem;right:.6rem" aria-label="Fermer">×</button>${html}</div>`;document.body.appendChild(m);m.addEventListener('click',e=>{if(e.target.classList.contains('modal-bg')||e.target.closest('.x'))m.remove()});$('.x',m).focus();return m}
+let tt;function toast(t){const el=$('.toast');el.textContent=t;el.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>el.classList.remove('show'),2800)}
 
-/* ===== countdown ===== */
 function cdState(){const n=NOW(),E=S.event;return n<Date.parse(E.start)?'before':n<=Date.parse(E.end)?'live':'after'}
 function tick(){
  const st=cdState(),E=S.event,target=Date.parse(st==='before'?E.start:E.end);
@@ -600,7 +1094,6 @@ function tick(){
  document.documentElement.dataset.state=st;
 }
 
-/* ===== router ===== */
 function route(){
  const h=location.hash;
  if(h&&!h.startsWith('#/')){const t=document.getElementById(h.slice(1));if(t&&$('[data-view="home"]').hidden){show('home')}return}
@@ -614,31 +1107,154 @@ function route(){
  if(v!=='product')$('.sticky-buy').classList.remove('show');
  closeCart(); window.scrollTo(0,0);
  const hh=$(`[data-view="${v}"] h1`); if(hh&&v!=='home'){hh.setAttribute('tabindex','-1');hh.focus({preventScroll:true})}
- S.onRoute&&S.onRoute(v,arg); reveal();
+ S.onRoute&&S.onRoute(v,arg); 
+ 
+ if (v === 'home') {
+  const t = document.getElementById('h-title');
+  if (t) animateGlitterText(t);
+ }
+ reveal();
 }
-function show(v){$$('[data-view]').forEach(s=>s.hidden=s.dataset.view!==v);document.body.classList.toggle('on-pdp',v==='product')}
+function show(v){
+  const currentView = $('[data-view]:not([hidden])');
+  const targetView = $(`[data-view="${v}"]`);
+  if (currentView && currentView !== targetView) {
+    currentView.style.opacity = '0';
+    currentView.style.transform = 'translate3d(0, 15px, 0)';
+    currentView.style.transition = 'opacity 0.22s ease, transform 0.22s ease';
+    setTimeout(() => {
+      $$('[data-view]').forEach(s => s.hidden = s.dataset.view !== v);
+      targetView.style.opacity = '0';
+      targetView.style.transform = 'translate3d(0, 15px, 0)';
+      void targetView.offsetWidth; // force reflow
+      targetView.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+      targetView.style.opacity = '1';
+      targetView.style.transform = 'none';
+      document.body.classList.toggle('on-pdp', v === 'product');
+      reveal();
+    }, 220);
+  } else {
+    $$('[data-view]').forEach(s => s.hidden = s.dataset.view !== v);
+    targetView.style.opacity = '1';
+    targetView.style.transform = 'none';
+    document.body.classList.toggle('on-pdp', v === 'product');
+    reveal();
+  }
+}
 addEventListener('hashchange',route);
 
-/* ===== reveal ===== */
 let io; function reveal(){ if(!('IntersectionObserver' in window)){$$('.rv').forEach(e=>e.classList.add('in'));return}
- io=io||new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
- $$('.rv:not(.in)').forEach(e=>io.observe(e)); }
+ io=io||new IntersectionObserver(es=>es.forEach(e=>{
+   if(e.isIntersecting){
+    e.target.classList.add('in');
+    if (e.target.tagName === 'H2' || e.target.classList.contains('glitter-trigger')) {
+     animateGlitterText(e.target);
+    }
+    io.unobserve(e.target);
+   }
+ }),{rootMargin:'0px 0px -8% 0px'});
+ $$('.rv:not(.in), .sec-h h2, section h2, .glitter-trigger').forEach(e=>io.observe(e));
+}
 
-/* sticky pdp bar visibility */
 addEventListener('scroll',()=>{const b=$('[data-add-cur]:not(.sticky-buy *)');const sb=$('.sticky-buy');if(!b||!document.body.classList.contains('on-pdp'))return;const r=b.getBoundingClientRect();sb.classList.toggle('show',r.bottom<0||r.top>innerHeight)},{passive:true});
 
-/* newsletter (Netlify Forms, falls back gracefully) */
 document.addEventListener('submit',e=>{const f=e.target;if(!f.matches('[data-netlify-form]'))return;e.preventDefault();
  const body=new URLSearchParams(new FormData(f)).toString();
  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body}).catch(()=>{}).finally(()=>{f.reset();toast(f.dataset.ok||'Merci, inscription confirmée')})});
 
-/* init */
+  /* Style Quiz Interactive Logic */
+  let quizAnswers = {};
+  const quizRecs = {
+    'chic-robe': {
+      title: 'La Silhouette Prestige Or',
+      desc: 'Pour votre dîner chic à la Haie Vive, brillez de mille feux. Nous vous conseillons la Robe Sequins Minuit mariée à nos Escarpins Champagne.',
+      items: ['robe', 'escarpins']
+    },
+    'chic-accessoires': {
+      title: 'L\'Accent Haute Couture',
+      desc: 'Misez sur la discrétion et le luxe absolu. Notre Pochette Étoile dorée et nos Boucles d\'oreilles Minuit dessineront une silhouette d\'une élégance rare.',
+      items: ['pochette', 'boucles']
+    },
+    'chic-beaute': {
+      title: 'L\'Éclat Sublime Haie Vive',
+      desc: 'Le maquillage parfait marié aux Boucles d\'oreilles Minuit. Un accord qui attrape subtilement la lueur des bougies de la Haie Vive.',
+      items: ['maquillage-paillettes', 'boucles']
+    },
+    'dance-robe': {
+      title: 'La Sirène de Fidjrossè',
+      desc: 'Parfait pour danser sous le ciel étoilé. La Robe Sequins Minuit et le Kit maquillage Paillettes feront de vous la reine de la plage de Fidjrossè.',
+      items: ['robe', 'maquillage-paillettes']
+    },
+    'dance-accessoires': {
+      title: 'L\'Étoile de Cotonou',
+      desc: 'Une liberté de mouvement totale sans sacrifier le chic. Les Escarpins Champagne et la Pochette Étoile dorée pour danser en toute légèreté.',
+      items: ['escarpins', 'pochette']
+    },
+    'dance-beaute': {
+      title: 'La Nuit Scintillante Fidjrossè',
+      desc: 'Sublimez votre regard avec le Kit Paillettes et notre Serre-tête 2027 doré pour des photos mémorables les pieds dans le sable.',
+      items: ['maquillage-paillettes', 'couronne-2027']
+    },
+    'stars-robe': {
+      title: 'Le Look Étoilé Complet',
+      desc: 'Une allure spectaculaire en un clic. Optez pour notre robe signature complète de sequins avec tous ses accessoires dorés coordonnés.',
+      items: ['look']
+    },
+    'stars-accessoires': {
+      title: 'La Parure des Cimes',
+      desc: 'Idéal pour briller au sommet de la ville. Les Boucles d\'oreilles Minuit et la Pochette Étoile dorée pour un port altier incontournable.',
+      items: ['boucles', 'pochette']
+    },
+    'stars-beaute': {
+      title: 'L\'Éclat Impérial Prestige',
+      desc: 'Une silhouette de soie et d\'or sur les hauteurs. Notre somptueux Tailleur Impératrice Or s\'accorde à merveille avec le Kit maquillage Paillettes.',
+      items: ['tailleur-soie', 'maquillage-paillettes']
+    }
+  };
+
+  document.addEventListener('click', e => {
+    const opt = e.target.closest('.quiz-opt');
+    if (opt) {
+      const step = parseInt(opt.dataset.step);
+      const val = opt.dataset.val;
+      quizAnswers[step] = val;
+      
+      if (step === 1) {
+        $('#quiz-step-1').style.display = 'none';
+        $('#quiz-step-2').style.display = 'block';
+      } else if (step === 2) {
+        $('#quiz-step-2').style.display = 'none';
+        const key = `${quizAnswers[1]}-${quizAnswers[2]}`;
+        const rec = quizRecs[key] || quizRecs['chic-robe'];
+        
+        $('#result-title').textContent = rec.title;
+        $('#result-text').textContent = rec.desc;
+        $('#quiz-add-btn').dataset.items = rec.items.join(',');
+        
+        $('#quiz-results').style.display = 'block';
+      }
+    }
+    
+    if (e.target.id === 'quiz-reset-btn') {
+      quizAnswers = {};
+      $('#quiz-results').style.display = 'none';
+      $('#quiz-step-1').style.display = 'block';
+    }
+    
+    if (e.target.id === 'quiz-add-btn') {
+      const items = e.target.dataset.items.split(',');
+      items.forEach(id => {
+        addToCart(id, 1);
+      });
+      toast('Sélection recommandée ajoutée au panier !');
+    }
+  });
+
 S.init&&S.init();
 $$('[data-grid]').forEach(el=>{const ids=el.dataset.grid.split(',');renderGrid(el,ids.map(i=>P[i]).filter(Boolean))});
 renderCart();tick();setInterval(tick,1000);route();
 $('#yr')&&($('#yr').textContent=new Date().getFullYear());
 })();
-
 </script>
 </body>
 </html>
